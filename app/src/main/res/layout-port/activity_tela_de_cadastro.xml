@@ -77,7 +77,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/telaDecadastro_btnCancelar"
-            android:layout_margin="3dp"/>
+            android:layout_margin="3dp"
+            android:onClick="cancelar"/>
 
 
     </LinearLayout>

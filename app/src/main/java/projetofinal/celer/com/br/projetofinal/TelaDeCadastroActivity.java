@@ -2,6 +2,7 @@ package projetofinal.celer.com.br.projetofinal;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -20,4 +21,9 @@ public class TelaDeCadastroActivity extends Activity {
 
 
     }
+    // pega o evento do botão cancelar e fecha a tela
+    public void cancelar (View view){
+        finish();
+    }
+
 }
