@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/fundo"
+    tools:context="projetofinal.celer.com.br.projetofinal.TelaDeCadastroActivity">
+    <TextView
+        android:id="@+id/telaDeCadastro_tvNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaDeCadastro_tvNome"
+        style="@style/label_texto"/>
+
+    <EditText
+        android:id="@+id/telaDeCadastro_edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/telaDeCadastro_edtNome" />
+
+
+    <TextView
+        android:id="@+id/telaDeCadastro_tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaDeCadastro_tvEmail"
+        style="@style/label_texto"/>
+
+    <EditText
+        android:id="@+id/telaDeCadastro_edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/telaDeCadastro_edtEmail" />
+
+    <TextView
+        android:id="@+id/telaDeCadastro_tvSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaDeCadastro_tvSenha"
+        style="@style/label_texto"/>
+
+    <EditText
+        android:id="@+id/telaDeCadastro_edtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/telaDeCadastro_edtSenha" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/telaDeCadastro_btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/telaDeCadastro_btnSalvar"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/telaDeCadastro_btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/telaDecadastro_btnCancelar"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+</LinearLayout>

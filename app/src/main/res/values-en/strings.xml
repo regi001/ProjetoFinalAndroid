@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">ProjetoFinal</string>
+    <string name="app_name">Final Project</string>
     <string name="TelaDeLogin_edtLogin" />
     <string name="TelaDeLogin_edtSenha" />
-    <string name="TelaDeLogin_btnEntrar">Entrar</string>
-    <string name="TelaDeLogin_tvCadstrarNovaConta">Não tem uma conta? Deseja Cadastrar</string>
+    <string name="TelaDeLogin_btnEntrar">OK</string>
+    <string name="TelaDeLogin_tvCadstrarNovaConta">Do not have an account? Do you want to Register?</string>
     <string name="TelaDeLogin_tvLogin">Login</string>
-    <string name="TelaDeLogin_tvSenha">Senha</string>
+    <string name="TelaDeLogin_tvSenha">Password</string>
+    <string name="telaDeCadastro_tvNome">Nome</string>
+    <string name="telaDeCadastro_edtNome" />
+    <string name="telaDeCadastro_tvSenha">Senha</string>
+    <string name="telaDeCadastro_edtEmail" />
+    <string name="telaDeCadastro_tvEmail">Email</string>
+    <string name="telaDeCadastro_edtSenha" />
+    <string name="telaDeCadastro_btnSalvar">Salvar</string>
+    <string name="telaDecadastro_btnCancelar">Cancelar</string>
 </resources>

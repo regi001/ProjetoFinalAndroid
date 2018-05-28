@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/fundo"
+    android:layout_gravity="center"
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeLoginActivity">
 
+    <TextView
+        android:id="@+id/TelaDeLogin_tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TelaDeLogin_tvLogin"
+        style="@style/label_texto"/>
+
+    <EditText
+        android:id="@+id/TelaDeLogin_edtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/TelaDeLogin_edtLogin" />
+
+    <TextView
+        android:id="@+id/TelaDeLogin_tvSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TelaDeLogin_tvSenha"
+        style="@style/label_texto"/>
+
+    <EditText
+        android:id="@+id/TelaDeLogin_edtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/TelaDeLogin_edtSenha" />
+
+    <Button
+        android:id="@+id/TelaDeLogin_btnEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/TelaDeLogin_btnEntrar" />
+
+    <TextView
+        android:id="@+id/TelaDeLogin_tvCadstrarNovaConta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:text="@string/TelaDeLogin_tvCadstrarNovaConta"
+        android:textAlignment="center"
+        style="@style/label_texto"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
