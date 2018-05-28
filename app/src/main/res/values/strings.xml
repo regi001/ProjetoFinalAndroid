@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProjetoFinal</string>
+    <string name="TelaDeLogin_edtLogin" />
+    <string name="TelaDeLogin_edtSenha" />
+    <string name="TelaDeLogin_btnEntrar">Entrar</string>
+    <string name="TelaDeLogin_tvCadstrarNovaConta">Não tem uma conta? Deseja Cadastrar</string>
+    <string name="TelaDeLogin_tvLogin">Login</string>
+    <string name="TelaDeLogin_tvSenha">Senha</string>
+</resources>
