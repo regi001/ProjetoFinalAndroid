@@ -19,11 +19,15 @@ public class TelaDeCadastroActivity extends Activity {
         edtEmail = findViewById(R.id.telaDeCadastro_edtEmail);
         edtSenha = findViewById(R.id.telaDeCadastro_edtSenha);
 
+        btnSalvar = findViewById(R.id.telaDeCadastro_btnSalvar);
+        btnCancelar = findViewById(R.id.telaDeCadastro_btnCancelar);
 
     }
     // pega o evento do botão cancelar e fecha a tela
     public void cancelar (View view){
         finish();
     }
+
+
 
 }
