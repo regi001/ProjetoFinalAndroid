@@ -3,6 +3,7 @@ package projetofinal.celer.com.br.projetofinal;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,9 +30,44 @@ TextView tvCadastrarConta;
                 Intent it= new Intent(TelaDeLoginActivity.this,TelaDeCadastroActivity.class);
                 startActivity(it);
             }
-        });{
+        });
 
 
-        }
+
+    }
+
+    public void entrar(View view){
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("appmain","passou resume");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("appmain","passou start");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("appmain","passou pause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("appmain","passou stop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("appmain","passou destroy");
     }
 }
+

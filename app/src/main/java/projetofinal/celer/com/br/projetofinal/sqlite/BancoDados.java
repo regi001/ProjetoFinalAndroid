@@ -17,7 +17,7 @@ public class BancoDados {
 	
 	// Cria a tabela com o "_id" sequencial
 	private static final String[] SCRIPT_DATABASE_CREATE = new String[] {
-			"CREATE TABLE tbl_cadastro(_id integer primary key, nome text, email text, senha text);"
+			"CREATE TABLE tbl_cadastro(nome text primary key,  email text, senha text);"
 	};
 
 	private static SQLiteDatabase db;

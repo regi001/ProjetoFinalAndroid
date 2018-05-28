@@ -8,21 +8,15 @@ public class Cadastro {
     private Long id;
     public String nome,email, senha;
 
-    final static String ID = "_id";
+
     final  static  String NOME = "nome";
     final  static  String EMAIL = "email";
     final  static  String SENHA = "senha";
 
     final static String TABELA = "tbl_cadastro";
-    final static String [] COLUNAS = new String []{ID,NOME,SENHA};
+    final static String [] COLUNAS = new String []{NOME,EMAIL,SENHA};
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;

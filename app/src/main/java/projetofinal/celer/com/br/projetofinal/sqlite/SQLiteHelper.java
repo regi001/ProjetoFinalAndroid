@@ -11,7 +11,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
 	/**
 	 * Cria uma instancia de SQLiteHelper
-	 * 
+	 *
 	 * @param context
 	 * @param nomeBanco nome do banco de dados
 	 * @param versaoBanco versao do banco de dados (se for diferente para atualizar)
@@ -20,7 +20,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 	 */
 	public SQLiteHelper(Context context, String name, int version, String[] scriptSQLCreate, String[] scriptSQLDelete) {
 		super(context, name, null, version);
-		
+
 		this.scriptSQLCreate = scriptSQLCreate;
 		this.scriptSQLDelete = scriptSQLDelete;
 	}
@@ -29,7 +29,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 	/**
 	 * Cria o banco de dados
 	 */
-	
+
 	public void onCreate(SQLiteDatabase db) {
 		int qtdeScripts = scriptSQLCreate.length;
 		// Executa cada sql passado como par???metro
@@ -39,7 +39,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 	}
 
 	@Override
-	
+
 	/**
 	 * Atualiza o banco da dados
 	 */
@@ -52,5 +52,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 		onCreate(db);
 
 	}
+
+
 
 }

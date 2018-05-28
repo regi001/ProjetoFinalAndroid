@@ -73,7 +73,8 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:elevation="0dp"
-            android:text="@string/telaDeCadastro_btnSalvar" />
+            android:text="@string/telaDeCadastro_btnSalvar"
+            android:onClick="salvar"/>
 
         <Button
             android:id="@+id/telaDeCadastro_btnCancelar"
