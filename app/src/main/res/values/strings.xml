@@ -14,4 +14,9 @@
     <string name="telaDeCadastro_edtSenha" />
     <string name="telaDeCadastro_btnSalvar">Salvar</string>
     <string name="telaDecadastro_btnCancelar">Cancelar</string>
+    <string name="telaDeLogin_hintLogin">Digite o seu Login</string>
+    <string name="telaDeLogin_hintSenha">Digite a sua senha</string>
+    <string name="telaDeCadastro_hintNome">Cadastre seu Nome</string>
+    <string name="telaDeCadastro_hintEmail">Cadastre seu Email</string>
+    <string name="telaDeCadastro_hintSenha">Cadastre sua senha</string>
 </resources>

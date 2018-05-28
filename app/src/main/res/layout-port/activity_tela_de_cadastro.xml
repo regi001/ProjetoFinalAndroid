@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/telaDeCadastro_edtNome" />
+        android:text="@string/telaDeCadastro_edtNome"
+        android:hint="@string/telaDeCadastro_hintNome"/>
 
 
     <TextView
@@ -38,7 +39,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/telaDeCadastro_edtEmail" />
+        android:text="@string/telaDeCadastro_edtEmail"
+        android:hint="@string/telaDeCadastro_hintEmail"/>
 
     <TextView
         android:id="@+id/telaDeCadastro_tvSenha"
@@ -53,7 +55,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/telaDeCadastro_edtSenha" />
+        android:text="@string/telaDeCadastro_edtSenha"
+        android:hint="@string/telaDeCadastro_hintSenha"/>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -7,6 +7,10 @@
     android:orientation="vertical"
     style="@style/fundo"
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeCadastroActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/telaDeCadastro_tvNome"
         android:layout_width="match_parent"
@@ -19,8 +23,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/telaDeCadastro_edtNome" />
+        android:hint="@string/telaDeCadastro_hintNome"
+
+
+        android:textAlignment="viewStart" />
 
 
     <TextView
@@ -36,7 +42,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/telaDeCadastro_edtEmail" />
+        android:text="@string/telaDeCadastro_edtEmail"
+        android:hint="@string/telaDeCadastro_hintEmail"/>
 
     <TextView
         android:id="@+id/telaDeCadastro_tvSenha"
@@ -51,7 +58,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/telaDeCadastro_edtSenha" />
+        android:text="@string/telaDeCadastro_edtSenha"
+        android:hint="@string/telaDeCadastro_hintSenha"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,9 +70,10 @@
             android:id="@+id/telaDeCadastro_btnSalvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="@string/telaDeCadastro_btnSalvar"
-            android:layout_margin="5dp"/>
+            android:elevation="0dp"
+            android:text="@string/telaDeCadastro_btnSalvar" />
 
         <Button
             android:id="@+id/telaDeCadastro_btnCancelar"
@@ -76,4 +85,5 @@
 
 
     </LinearLayout>
+</ScrollView>
 </LinearLayout>

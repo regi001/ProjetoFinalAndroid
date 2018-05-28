@@ -21,8 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/telaDeLogin_hintLogin"
         android:inputType="textPersonName"
-        android:text="@string/TelaDeLogin_edtLogin" />
+        android:text="@string/TelaDeLogin_edtLogin"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/TelaDeLogin_tvSenha"
@@ -36,8 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/telaDeLogin_hintSenha"
         android:inputType="textPassword"
-        android:text="@string/TelaDeLogin_edtSenha" />
+        android:text="@string/TelaDeLogin_edtSenha"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/TelaDeLogin_btnEntrar"
