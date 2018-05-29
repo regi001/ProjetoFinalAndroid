@@ -27,7 +27,7 @@ public class CadastroDAO {
 
     public void salvar(Cadastro cadastro) {
         ContentValues values = new ContentValues();
-        values.put(Cadastro.NOME, cadastro.getNome());
+        values.put(Cadastro.USUARIO, cadastro.getUsuario());
         values.put(Cadastro.SENHA, cadastro.getSenha());
         values.put(Cadastro.EMAIL, cadastro.getEmail());
         db.insert(Cadastro.TABELA, null, values);
@@ -35,17 +35,17 @@ public class CadastroDAO {
 
 
 
-    public Cadastro buscar(String nome, String email, String senha) {
+    public Cadastro buscar(String usuario, String email, String senha) {
 
         String[] colunas = Cadastro.COLUNAS;
-        String[] where = new String[]{nome};
+        String[] where = new String[]{usuario};
 
-        Cursor c = db.query(Cadastro.TABELA, colunas, "nome =?", where, null, null, null, null);
+        Cursor c = db.query(Cadastro.TABELA, colunas, "usuario =?", where, null, null, null, null);
         c.moveToFirst();
 
         Cadastro cadastro = new Cadastro();
 
-        cadastro.setNome(c.getString(c.getColumnIndex(Cadastro.NOME)));
+        cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
         cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
         cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
@@ -54,10 +54,10 @@ public class CadastroDAO {
 
     public void alterar(Cadastro cadastro) {
 
-        String[] where = new String[]{String.valueOf(cadastro.getNome())};
+        String[] where = new String[]{String.valueOf(cadastro.getUsuario())};
         ContentValues values = new ContentValues();
 
-        values.put(Cadastro.NOME, cadastro.getNome());
+        values.put(Cadastro.USUARIO, cadastro.getUsuario());
         values.put(Cadastro.EMAIL, cadastro.getEmail());
         values.put(Cadastro.SENHA, cadastro.getSenha());
 
@@ -65,10 +65,10 @@ public class CadastroDAO {
         db.update(Cadastro.TABELA, values, "nome=?", where);
     }
 
-    public void excluir(String nome) {
+    public void excluir(String usuario) {
 
-        String[] where = new String[]{nome};
-        db.delete(Cadastro.TABELA, "nome = ?", where);
+        String[] where = new String[]{usuario};
+        db.delete(Cadastro.TABELA, "usuario = ?", where);
     }
 
     public List<Cadastro> listar() {
@@ -82,34 +82,34 @@ public class CadastroDAO {
             Cadastro cadastro = new Cadastro();
 
 
-            cadastro.setNome(c.getString(c.getColumnIndex(Cadastro.NOME)));
+            cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
 
             cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
             cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
             cadastros.add(cadastro);
 
-            Log.i("lista", cadastro.getNome() + cadastro.getNome());
+            Log.i("lista", cadastro.getUsuario() + cadastro.getUsuario());
         } while (c.moveToNext());
         return cadastros;
     }
 
 
- public boolean validarCadastro(String nome,String email, String senha){
+ public boolean validarCadastro(String usuario,String email, String senha){
      String[] colunas = Cadastro.COLUNAS;
-     String[] where = new String[]{nome};
+     String[] where = new String[]{usuario};
 
-     Cursor c = db.query(Cadastro.TABELA, colunas, "nome =?", where, null, null, null, null);
+     Cursor c = db.query(Cadastro.TABELA, colunas, "usuario =?", where, null, null, null, null);
      c.moveToFirst();
 
      Cadastro cadastro = new Cadastro();
 
-     cadastro.setNome(c.getString(c.getColumnIndex(Cadastro.NOME)));
+     cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
      cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
      cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
      if (senha.equals(cadastro.getSenha()) ){
-         
+
              return true;
      }else {
 

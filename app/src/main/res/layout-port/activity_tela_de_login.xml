@@ -10,6 +10,22 @@
 
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeLoginActivity">
     <TextView
+        android:id="@+id/TelaDeLogin_tvUsuario"
+        style="@style/label_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TelaDeLogin_tvUsuario" />
+
+    <EditText
+        android:id="@+id/TelaDeLogin_edtUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/telaDeLogin_hintUsuario"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <TextView
         android:id="@+id/TelaDeLogin_tvLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

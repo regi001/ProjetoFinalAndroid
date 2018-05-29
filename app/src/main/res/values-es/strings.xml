@@ -14,4 +14,6 @@
     <string name="telaDeCadastro_edtSenha" />
     <string name="telaDeCadastro_btnSalvar">Salvar</string>
     <string name="telaDecadastro_btnCancelar">Cancelar</string>
+    <string name="TelaDeLogin_tvUsuario">Usuario</string>
+    <string name="TelaDeLogin_edtUsuario" />
 </resources>

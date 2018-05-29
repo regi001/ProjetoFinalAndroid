@@ -16,7 +16,10 @@
     <string name="telaDecadastro_btnCancelar">Cancelar</string>
     <string name="telaDeLogin_hintLogin">Digite o seu Login</string>
     <string name="telaDeLogin_hintSenha">Digite a sua senha</string>
+    <string name="telaDeLogin_hintUsuario">Digite seu usuario</string>
     <string name="telaDeCadastro_hintNome">Cadastre seu Nome</string>
     <string name="telaDeCadastro_hintEmail">Cadastre seu Email</string>
     <string name="telaDeCadastro_hintSenha">Cadastre sua senha</string>
+    <string name="TelaDeLogin_tvUsuario">Usuario</string>
+    <string name="TelaDeLogin_edtUsuario" />
 </resources>

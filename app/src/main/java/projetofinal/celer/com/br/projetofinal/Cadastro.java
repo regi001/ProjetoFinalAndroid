@@ -6,24 +6,23 @@ package projetofinal.celer.com.br.projetofinal;
 
 public class Cadastro {
     private Long id;
-    public String nome,email, senha;
+    public String usuario,email, senha;
 
 
-    final  static  String NOME = "nome";
+    final  static  String USUARIO = "usuario";
     final  static  String EMAIL = "email";
     final  static  String SENHA = "senha";
 
     final static String TABELA = "tbl_cadastro";
-    final static String [] COLUNAS = new String []{NOME,EMAIL,SENHA};
+    final static String [] COLUNAS = new String []{USUARIO,EMAIL,SENHA};
 
 
-
-    public String getNome() {
-        return nome;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getEmail() {

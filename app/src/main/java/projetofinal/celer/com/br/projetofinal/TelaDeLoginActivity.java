@@ -8,21 +8,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TelaDeLoginActivity extends Activity {
-EditText edtLogin, edtSenha;
+EditText edtUsuario, edtLogin, edtSenha;
 Button btnConfirmar;
 TextView tvCadastrarConta;
+CadastroDAO cadastroDAO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_de_login);
 
+        edtUsuario = findViewById(R.id.TelaDeLogin_edtUsuario);
         edtLogin = findViewById(R.id.TelaDeLogin_edtLogin);
         edtSenha = findViewById(R.id.TelaDeLogin_edtSenha);
         btnConfirmar = findViewById(R.id.TelaDeLogin_btnEntrar);
         tvCadastrarConta = findViewById(R.id.TelaDeLogin_tvCadstrarNovaConta);
+
 
         tvCadastrarConta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,8 +41,20 @@ TextView tvCadastrarConta;
 
     }
 
-    public void entrar(View view){
+    public void entrar(View view) {
+        String usuario = edtUsuario.getText().toString();
+        String email = edtLogin.getText().toString();
+        String senha = edtSenha.getText().toString();
 
+        if (cadastroDAO.validarCadastro(usuario, email,  senha)) {
+            Intent it = new Intent(TelaDeLoginActivity.this
+                    , TelaDeCadastroActivity.class);
+            startActivity(it);
+        } else {
+            finish();
+
+
+        }
     }
 
     @Override
