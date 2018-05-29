@@ -35,7 +35,7 @@ public class CadastroDAO {
 
 
 
-    public Cadastro buscar(String usuario, String email, String senha) {
+    public Cadastro buscar(String usuario) {
 
         String[] colunas = Cadastro.COLUNAS;
         String[] where = new String[]{usuario};
@@ -108,10 +108,8 @@ public class CadastroDAO {
      cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
      cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
-     if (senha.equals(cadastro.getSenha()) ){
-
-             return true;
-     }else {
+     if (usuario.equals(cadastro.getUsuario()) ) return true;
+     else {
 
          return false;
      }

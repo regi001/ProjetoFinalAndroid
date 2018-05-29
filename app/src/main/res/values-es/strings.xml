@@ -16,4 +16,9 @@
     <string name="telaDecadastro_btnCancelar">Cancelar</string>
     <string name="TelaDeLogin_tvUsuario">Usuario</string>
     <string name="TelaDeLogin_edtUsuario" />
+    <string name="telaInicial_tvMensagem">Bem Vindo: ao E-SCFV</string>
+    <string name="telaInicial_tvMensagem02">Para ter acesso efetue o login</string>
+    <string name="telaInicial_btnLogin">Login</string>
+    <string name="telaInicial_cadastrarLogin">Cadastrar Login</string>
+    <string name="telaInicial_tvMensagem03">Caso ainda não tenha usuário e senha cadastre o seu login</string>
 </resources>

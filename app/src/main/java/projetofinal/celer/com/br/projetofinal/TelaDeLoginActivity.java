@@ -46,11 +46,15 @@ CadastroDAO cadastroDAO;
         String email = edtLogin.getText().toString();
         String senha = edtSenha.getText().toString();
 
+
         if (cadastroDAO.validarCadastro(usuario, email,  senha)) {
             Intent it = new Intent(TelaDeLoginActivity.this
                     , TelaDeCadastroActivity.class);
             startActivity(it);
+
+            Log.i("appmain","passou pelo if" );
         } else {
+            Log.i("appmain","passou pelo else" );
             finish();
 
 

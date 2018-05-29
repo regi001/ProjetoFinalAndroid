@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="projetofinal.celer.com.br.projetofinal.TelaInicialActivity">
+
+
+    <TextView
+    android:id="@+id/telaInicial_tvMensagem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/telaInicial_tvMensagem"
+    android:textAlignment="center"
+    />
+
+    <TextView
+        android:id="@+id/telaInicial_tvMensagem02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaInicial_tvMensagem02"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/telaInicial_btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaInicial_btnLogin"
+        android:onClick="login"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/telaInicial_tvMensagem03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaInicial_tvMensagem03"
+        android:textAlignment="center"
+        android:padding="4dp"/>
+
+    <Button
+        android:id="@+id/telaInicial_cadastrarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaInicial_cadastrarLogin"
+        android:onClick="cadastrarLogin"
+        android:padding="5dp"/>
+
+</LinearLayout>

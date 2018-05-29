@@ -1,6 +1,7 @@
 package projetofinal.celer.com.br.projetofinal;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,10 @@ public class TelaDeCadastroActivity extends Activity {
     Button btnSalvar, btnCancelar;
     CadastroDAO dao;
 
+    final int MENU_SALVAR = 1;
+    final int MENU_BUSCAR = 2;
+    final int MENU_ALTERAR = 3;
+    final int MENU_EXCLUIR = 4;
 
 
     @Override
@@ -28,6 +33,10 @@ public class TelaDeCadastroActivity extends Activity {
         edtUsuario = findViewById(R.id.telaDeCadastro_edtNome);
         edtEmail = findViewById(R.id.telaDeCadastro_edtEmail);
         edtSenha = findViewById(R.id.telaDeCadastro_edtSenha);
+
+        Intent it = getIntent();
+        String usuario = it.getStringExtra(Cadastro.USUARIO);
+
 
         btnSalvar = findViewById(R.id.telaDeCadastro_btnSalvar);
         btnCancelar = findViewById(R.id.telaDeCadastro_btnCancelar);
@@ -46,14 +55,19 @@ public void salvar (View view){
     cadastro.setEmail(edtEmail.getText().toString());
     cadastro.setSenha(edtSenha.getText().toString());
 
-
-
-
     dao.salvar(cadastro);
     Log.i("appmain","passou salvar" );
     finish();
 }
+    public void buscarCadatro(){
 
+       Cadastro cadastro = dao.buscar(edtUsuario.getText().toString());
+
+        edtUsuario.setText(cadastro.getUsuario());
+       edtEmail.setText(cadastro.getEmail());
+       edtSenha.setText(cadastro.getSenha());
+
+    }
 
 
 

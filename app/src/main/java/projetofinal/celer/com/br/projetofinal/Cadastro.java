@@ -5,7 +5,7 @@ package projetofinal.celer.com.br.projetofinal;
  */
 
 public class Cadastro {
-    private Long id;
+
     public String usuario,email, senha;
 
 
