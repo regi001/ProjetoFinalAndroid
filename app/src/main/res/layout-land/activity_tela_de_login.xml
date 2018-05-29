@@ -26,7 +26,9 @@
         android:inputType="textPersonName"
 
         android:textAlignment="center" />
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/TelaDeLogin_tvLogin"
         android:layout_width="match_parent"
@@ -60,7 +62,11 @@
         android:inputType="textPassword"
         android:text="@string/TelaDeLogin_edtSenha"
         android:textAlignment="center" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
     <Button
         android:id="@+id/TelaDeLogin_btnEntrar"
         android:layout_width="wrap_content"
@@ -68,6 +74,15 @@
         android:layout_gravity="center"
         android:text="@string/TelaDeLogin_btnEntrar"
         android:onClick="entrar"/>
+
+    <Button
+        android:id="@+id/TelaDeLogin_btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="cancelar"
+        android:text="@string/TelaDeLogin_btnCancelar" />
+</LinearLayout>
 
     <TextView
         android:id="@+id/TelaDeLogin_tvCadstrarNovaConta"
@@ -79,5 +94,5 @@
         android:text="@string/TelaDeLogin_tvCadstrarNovaConta"
         android:textAlignment="center" />
 
-
+</ScrollView>
 </LinearLayout>

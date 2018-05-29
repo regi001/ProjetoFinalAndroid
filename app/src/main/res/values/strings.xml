@@ -27,4 +27,5 @@
     <string name="telaInicial_btnLogin">Login</string>
     <string name="telaInicial_cadastrarLogin">Cadastrar Login</string>
     <string name="telaInicial_tvMensagem03">Caso ainda não tenha usuário e senha cadastre o seu login</string>
+    <string name="TelaDeLogin_btnCancelar">Cancelar</string>
 </resources>

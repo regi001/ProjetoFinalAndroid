@@ -59,13 +59,23 @@
         android:text="@string/TelaDeLogin_edtSenha"
         android:textAlignment="center" />
 
-    <Button
-        android:id="@+id/TelaDeLogin_btnEntrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/TelaDeLogin_btnEntrar"
-        android:onClick="entrar"/>
+
+        <Button
+            android:id="@+id/TelaDeLogin_btnEntrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/TelaDeLogin_btnEntrar"
+            android:onClick="entrar"/>
+
+        <Button
+            android:id="@+id/TelaDeLogin_btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="cancelar"
+            android:text="@string/TelaDeLogin_btnCancelar" />
+
 
     <TextView
         android:id="@+id/TelaDeLogin_tvCadstrarNovaConta"
