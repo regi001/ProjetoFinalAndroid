@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class TelaDeCadastroActivity extends Activity {
-    EditText edtNome, edtEmail, edtSenha;
+    EditText edtUsuario, edtEmail, edtSenha;
     Button btnSalvar, btnCancelar;
     CadastroDAO dao;
 
@@ -25,7 +25,7 @@ public class TelaDeCadastroActivity extends Activity {
         dao = new CadastroDAO(this);
 
 
-        edtNome = findViewById(R.id.telaDeCadastro_edtNome);
+        edtUsuario = findViewById(R.id.telaDeCadastro_edtNome);
         edtEmail = findViewById(R.id.telaDeCadastro_edtEmail);
         edtSenha = findViewById(R.id.telaDeCadastro_edtSenha);
 
@@ -42,7 +42,7 @@ public class TelaDeCadastroActivity extends Activity {
 public void salvar (View view){
     Cadastro cadastro= new Cadastro();
 
-    cadastro.setNome(edtNome.getText().toString());
+    cadastro.setUsuario(edtUsuario.getText().toString());
     cadastro.setEmail(edtEmail.getText().toString());
     cadastro.setSenha(edtSenha.getText().toString());
 
