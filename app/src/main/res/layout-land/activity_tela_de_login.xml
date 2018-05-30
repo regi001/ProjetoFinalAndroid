@@ -26,9 +26,7 @@
         android:inputType="textPersonName"
 
         android:textAlignment="center" />
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/TelaDeLogin_tvLogin"
         android:layout_width="match_parent"
@@ -94,5 +92,5 @@
         android:text="@string/TelaDeLogin_tvCadstrarNovaConta"
         android:textAlignment="center" />
 
-</ScrollView>
+
 </LinearLayout>

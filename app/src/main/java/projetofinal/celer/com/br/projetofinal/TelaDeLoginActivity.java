@@ -22,6 +22,8 @@ CadastroDAO cadastroDAO;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_de_login);
 
+        CadastroDAO cadastroDAO = new CadastroDAO(this);
+
         edtUsuario = findViewById(R.id.TelaDeLogin_edtUsuario);
         edtLogin = findViewById(R.id.TelaDeLogin_edtLogin);
         edtSenha = findViewById(R.id.TelaDeLogin_edtSenha);
