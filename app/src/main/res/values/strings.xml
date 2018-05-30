@@ -30,4 +30,19 @@
     <string name="TelaDeLogin_btnCancelar">Cancelar</string>
     <string name="telaDeCadastro_tvTitulo">Cadastro de Usuario, login e senha</string>
     <string name="telaDeLogin_tvTitulo">Digite seu Nome de usuário, Login e Senha</string>
+    <string name="telaDeCadastroDeGrupo_tvId">Id:</string>
+    <string name="telaDeCadastroDeGrupo_edtId" />
+    <string name="telaDeCadastroDeGrupo_tvNomeDoGrupo">Nome Do Grupo:</string>
+    <string name="TelaDeCadastroDeGrupo_edtNomeDoGrupo" />
+    <string name="telaDeCadastroDeGrupo_tvMonitorResponsavel">Monitor Responsavel:</string>
+    <string name="telaDeCadastroDeGrupo_edtMonitorResponsavel" />
+    <string name="telaDeCadastroDeGrupo_tvLocalDeAtuacao">Local De Atuação:</string>
+    <string name="telaDeCadastroDeGrupo_edtLocalDeAtuacao" />
+    <string name="telaDeCadastroDeGrupo_tvIdadeInicial">Idade inicial De Ingresso No Grupo</string>
+    <string name="telaDeCadastroDeGrupo_edtIdadeInicial" />
+    <string name="telaDeCadastroDeGrupo_tvIdadeFinal">Idade Final De Participação No Grupo:</string>
+    <string name="telaDeCadastroDeGrupo_edtIdadeFinal" />
+    <string name="telaDeCadastroDeGrupo_btnSalvar">Salvar</string>
+    <string name="telaDeCadastroDeGrupo_btnCancelar">Cancelar</string>
+    <string name="telaDeCadastroDeGrupo_tvCadastrarUsuaio">Deseja Cadastrar usuário:?Clique aqui !</string>
 </resources>

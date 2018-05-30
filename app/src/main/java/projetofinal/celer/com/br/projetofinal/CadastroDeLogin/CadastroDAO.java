@@ -1,12 +1,10 @@
-package projetofinal.celer.com.br.projetofinal;
+package projetofinal.celer.com.br.projetofinal.CadastroDeLogin;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;

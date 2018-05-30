@@ -1,7 +1,9 @@
-package projetofinal.celer.com.br.projetofinal;
+package projetofinal.celer.com.br.projetofinal.CadastroDeGrupo;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeGrupoActivity extends Activity {
 

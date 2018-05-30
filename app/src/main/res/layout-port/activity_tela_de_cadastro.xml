@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     style="@style/fundo"
-    tools:context="projetofinal.celer.com.br.projetofinal.TelaDeCadastroActivity">
+    tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity">
 
     <TextView
         android:id="@+id/telaDeCadastro_tvTitulo"

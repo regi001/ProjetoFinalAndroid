@@ -1,4 +1,4 @@
-package projetofinal.celer.com.br.projetofinal;
+package projetofinal.celer.com.br.projetofinal.CadastroDeLogin;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import projetofinal.celer.com.br.projetofinal.R;
+import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity;
 
 public class TelaDeLoginActivity extends Activity {
 EditText edtUsuario, edtLogin, edtSenha;

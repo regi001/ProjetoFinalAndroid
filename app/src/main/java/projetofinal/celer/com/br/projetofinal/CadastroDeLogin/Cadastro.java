@@ -1,4 +1,4 @@
-package projetofinal.celer.com.br.projetofinal;
+package projetofinal.celer.com.br.projetofinal.CadastroDeLogin;
 
 /**
  * Created by regia on 28/05/2018.

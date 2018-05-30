@@ -7,7 +7,7 @@
     android:orientation="vertical"
     style="@style/fundo"
     android:layout_gravity="center"
-    tools:context="projetofinal.celer.com.br.projetofinal.TelaDeLoginActivity">
+    tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeLoginActivity">
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
