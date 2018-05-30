@@ -1,86 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
     style="@style/fundo"
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeCadastroActivity">
 
-    <TextView
-        android:id="@+id/telaDeCadastro_tvNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/telaDeCadastro_tvNome"
-        style="@style/label_texto"/>
-
-    <EditText
-        android:id="@+id/telaDeCadastro_edtNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/telaDeCadastro_hintNome"
-        android:textAlignment="viewStart" />
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/telaDeCadastro_tvEmail"
+        android:id="@+id/telaDeCadastro_tvTitulo"
+        style="@style/label_texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/telaDeCadastro_tvEmail"
-        style="@style/label_texto"/>
-
-    <EditText
-        android:id="@+id/telaDeCadastro_edtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/telaDeCadastro_edtEmail"
-        android:hint="@string/telaDeCadastro_hintEmail"/>
-
-    <TextView
-        android:id="@+id/telaDeCadastro_tvSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/telaDeCadastro_tvSenha"
-        style="@style/label_texto"/>
-
-    <EditText
-        android:id="@+id/telaDeCadastro_edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/telaDeCadastro_edtSenha"
-        android:hint="@string/telaDeCadastro_hintSenha"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/telaDeCadastro_btnSalvar"
-            android:layout_width="wrap_content"
+        android:text="@string/telaDeCadastro_tvTitulo"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="10dp"/>
+        <TextView
+            style="@style/label_texto"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:elevation="0dp"
-            android:text="@string/telaDeCadastro_btnSalvar"
-            android:onClick="salvar"/>
+            android:text="@string/telaDeCadastro_tvNome" />
 
-        <Button
-            android:id="@+id/telaDeCadastro_btnCancelar"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/telaDeCadastro_edtNome"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/telaDecadastro_btnCancelar"
-            android:layout_margin="5dp"
-            android:onClick="cancelar"/>
+            android:ems="10"
+            android:hint="@string/telaDeCadastro_hintNome"
+            android:textAlignment="viewStart" />
 
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/telaDeCadastro_tvEmail"
+            style="@style/label_texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telaDeCadastro_tvEmail" />
 
+        <EditText
+            android:id="@+id/telaDeCadastro_edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/telaDeCadastro_hintEmail"
+            android:inputType="textEmailAddress"
+            android:text="@string/telaDeCadastro_edtEmail" />
+
+        <TextView
+            android:id="@+id/telaDeCadastro_tvSenha"
+            style="@style/label_texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telaDeCadastro_tvSenha" />
+
+        <EditText
+            android:id="@+id/telaDeCadastro_edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/telaDeCadastro_hintSenha"
+            android:inputType="textPersonName"
+            android:text="@string/telaDeCadastro_edtSenha" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/telaDeCadastro_btnSalvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:elevation="0dp"
+                android:onClick="salvar"
+                android:text="@string/telaDeCadastro_btnSalvar" />
+
+            <Button
+                android:id="@+id/telaDeCadastro_btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:onClick="cancelar"
+                android:text="@string/telaDecadastro_btnCancelar" />
+
+
+        </LinearLayout>
 </LinearLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

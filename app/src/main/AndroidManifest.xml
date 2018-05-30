@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TelaDeCadastroActivity" />
-        <activity android:name=".TelaDeLoginActivity"></activity>
+        <activity android:name=".TelaDeLoginActivity" />
+        <activity android:name=".TelaDeCadastroDeGrupoActivity"></activity>
     </application>
 
 </manifest>

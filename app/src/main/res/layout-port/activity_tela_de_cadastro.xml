@@ -5,9 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     style="@style/fundo"
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeCadastroActivity">
 
+    <TextView
+        android:id="@+id/telaDeCadastro_tvTitulo"
+        style="@style/label_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaDeCadastro_tvTitulo"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/telaDeCadastro_tvNome"
@@ -59,8 +70,8 @@
         android:hint="@string/telaDeCadastro_hintSenha"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button

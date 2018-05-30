@@ -7,8 +7,19 @@
     android:orientation="vertical"
     android:gravity="center"
     style="@style/fundo"
-
     tools:context="projetofinal.celer.com.br.projetofinal.TelaDeLoginActivity">
+
+    <TextView
+        android:id="@+id/telaDeLogin_tvTitulo"
+        style="@style/label_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/telaDeLogin_tvTitulo"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
     <TextView
         android:id="@+id/TelaDeLogin_tvUsuario"
         style="@style/label_texto"
@@ -18,6 +29,7 @@
 
     <EditText
         android:id="@+id/TelaDeLogin_edtUsuario"
+        style="@android:style/Widget.Material.Light.AutoCompleteTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -59,7 +71,12 @@
         android:text="@string/TelaDeLogin_edtSenha"
         android:textAlignment="center" />
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+  >
         <Button
             android:id="@+id/TelaDeLogin_btnEntrar"
             android:layout_width="wrap_content"
@@ -75,7 +92,7 @@
             android:layout_gravity="center"
             android:onClick="cancelar"
             android:text="@string/TelaDeLogin_btnCancelar" />
-
+</LinearLayout>
 
     <TextView
         android:id="@+id/TelaDeLogin_tvCadstrarNovaConta"

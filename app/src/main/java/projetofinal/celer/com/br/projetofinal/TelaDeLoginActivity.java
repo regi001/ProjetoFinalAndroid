@@ -50,8 +50,8 @@ CadastroDAO cadastroDAO;
 
 
         if (cadastroDAO.validarCadastro(usuario, email, senha)) {
-            Intent it = new Intent(TelaDeLoginActivity.this
-                    , TelaDeCadastroActivity.class);
+            Intent it = new Intent(this
+                    , TelaDeCadastroDeGrupoActivity.class);
             startActivity(it);
 
             Log.i("appmain", "passou pelo if");
