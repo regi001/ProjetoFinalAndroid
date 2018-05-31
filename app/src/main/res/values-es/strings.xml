@@ -46,4 +46,5 @@
     <string name="menu_excluir">Excluir</string>
     <string name="telaDeCadastroDeGrupo_tvDescriçãoDeAtividades">Dercreva as atividades do grupo:</string>
     <string name="telaDeCadastroDeGrupo_edtDescricaoDeAtividades" />
+    <string name="cadastroDeGrupoListItem_tvNomeDoGrupo">Nome Do Grupo:</string>
 </resources>

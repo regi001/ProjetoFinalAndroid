@@ -93,7 +93,7 @@ public class CadastroDAO {
     }
 
 
- public boolean validarCadastro(String usuario,String email, String senha){
+ public boolean validarCadastro(String usuario){
      String[] colunas = Cadastro.COLUNAS;
      String[] where = new String[]{usuario};
 
@@ -107,10 +107,7 @@ public class CadastroDAO {
      cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
      if (usuario.equals(cadastro.getUsuario()) ) return true;
-     else {
-
-         return false;
-     }
+     else {return false;}
 
 
  }

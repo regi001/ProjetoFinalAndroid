@@ -24,7 +24,7 @@ CadastroDAO cadastroDAO;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_de_login);
 
-        CadastroDAO cadastroDAO = new CadastroDAO(this);
+         cadastroDAO = new CadastroDAO(this);
 
         edtUsuario = findViewById(R.id.TelaDeLogin_edtUsuario);
         edtLogin = findViewById(R.id.TelaDeLogin_edtLogin);
@@ -51,7 +51,7 @@ CadastroDAO cadastroDAO;
         String senha = edtSenha.getText().toString();
 
 
-        if (cadastroDAO.validarCadastro(usuario, email, senha)) {
+        if (cadastroDAO.validarCadastro(usuario)) {
             Intent it = new Intent(this
                     , TelaDeCadastroDeGrupoActivity.class);
             startActivity(it);
