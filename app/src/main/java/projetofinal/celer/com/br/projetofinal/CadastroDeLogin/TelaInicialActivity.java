@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaInicialActivity extends Activity {
@@ -31,5 +32,12 @@ public class TelaInicialActivity extends Activity {
     public void cadastrarLogin (View view){
         Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroActivity.class);
         startActivity(it);
+    }
+
+    public void cadastrarGrupo(View view){
+        Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroDeGrupoActivity.class);
+        startActivity(it);
+
+
     }
 }

@@ -3,6 +3,7 @@ package projetofinal.celer.com.br.projetofinal.CadastroDeGrupo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -98,6 +99,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
         dao.salvar(cadastroDeGrupo);
         finish();
+        Log.i("appmain","passou salvar");
     }
     public void buscarGrupo(){
 
@@ -109,7 +111,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         edtIdadeDeInicio.setText(cadastroDeGrupo.getIdadeInicialDeEntrada());
         edtIdadeFinal.setText(cadastroDeGrupo.getIdadeFinalDeSaida());
 
-
+        Log.i("appmain","passou buscar");
 
     }
     public void alterarGrupo(){

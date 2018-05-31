@@ -31,6 +31,8 @@ public class CadastroDeGrupoDAO {
         values.put(CadastroDeGrupo.IDADE_INICIAL_DE_ENTRADA,cadastroDeGrupo.getIdadeInicialDeEntrada());
         values.put(CadastroDeGrupo.IDADE_FINAL_DE_SAIDA, cadastroDeGrupo.getIdadeFinalDeSaida());
         db.insert(CadastroDeGrupo.TABELA, null, values);
+
+        Log.i("appmain","passou salvar");
     }
 
 

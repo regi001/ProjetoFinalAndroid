@@ -47,5 +47,12 @@
         android:text="@string/telaInicial_cadastrarLogin"
         android:onClick="cadastrarLogin"
         android:padding="5dp"/>
+    <Button
+        android:id="@+id/telaInicial_chamarCadastrargrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaInicial_chamarCadastarGrupo"
+        android:onClick="cadastrarGrupo"
+        android:padding="5dp"/>
 
 </LinearLayout>
