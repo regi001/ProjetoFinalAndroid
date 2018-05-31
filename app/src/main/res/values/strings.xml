@@ -45,4 +45,8 @@
     <string name="telaDeCadastroDeGrupo_btnSalvar">Salvar</string>
     <string name="telaDeCadastroDeGrupo_btnCancelar">Cancelar</string>
     <string name="telaDeCadastroDeGrupo_tvCadastrarUsuaio">Deseja Cadastrar usuário:?Clique aqui !</string>
+    <string name="menu_salvar">Salvar</string>
+    <string name="menu_buscar">Buscar</string>
+    <string name="menu_alterar">Alterar</string>
+    <string name="menu_excluir">Excluir</string>
 </resources>
