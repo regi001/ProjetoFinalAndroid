@@ -28,11 +28,12 @@ public class CadastroDeGrupoDAO {
 
         values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
         values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
-        values.put(CadastroDeGrupo.IDADE_INICIAL_DE_ENTRADA,cadastroDeGrupo.getIdadeInicialDeEntrada());
-        values.put(CadastroDeGrupo.IDADE_FINAL_DE_SAIDA, cadastroDeGrupo.getIdadeFinalDeSaida());
+        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
+
         db.insert(CadastroDeGrupo.TABELA, null, values);
 
         Log.i("appmain","passou salvar");
+        Log.i("lista",cadastroDeGrupo.getMonitorResponsavel());
     }
 
 
@@ -51,9 +52,9 @@ public class CadastroDeGrupoDAO {
         cadastroDeGrupo.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
         cadastroDeGrupo.setMonitorResponsavel(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
         cadastroDeGrupo.setLocalDeAtuacao(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
-        cadastroDeGrupo.setIdadeInicialDeEntrada(Integer.valueOf(c.getString(c.getColumnIndex(CadastroDeGrupo.IDADE_INICIAL_DE_ENTRADA))));
-        cadastroDeGrupo.setIdadeFinalDeSaida(Integer.valueOf(c.getString(c.getColumnIndex(CadastroDeGrupo.IDADE_FINAL_DE_SAIDA))));
+        cadastroDeGrupo.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
 
+        Log.i("appmain","passou buscar");
 
        return cadastroDeGrupo;
     }
@@ -65,8 +66,8 @@ public class CadastroDeGrupoDAO {
 
         values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
         values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
-        values.put(CadastroDeGrupo.IDADE_INICIAL_DE_ENTRADA,cadastroDeGrupo.getIdadeInicialDeEntrada());
-        values.put(CadastroDeGrupo.IDADE_FINAL_DE_SAIDA, cadastroDeGrupo.getIdadeFinalDeSaida());
+        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
+
 
 
         db.update(CadastroDeGrupo.TABELA, values, "_id=?", where);
@@ -93,8 +94,8 @@ public class CadastroDeGrupoDAO {
             cadastroDeGrupo.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
             cadastroDeGrupo.setMonitorResponsavel(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
             cadastroDeGrupo.setLocalDeAtuacao(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
-            cadastroDeGrupo.setIdadeInicialDeEntrada(Integer.valueOf(c.getString(c.getColumnIndex(CadastroDeGrupo.IDADE_INICIAL_DE_ENTRADA))));
-            cadastroDeGrupo.setIdadeFinalDeSaida(Integer.valueOf(c.getString(c.getColumnIndex(CadastroDeGrupo.IDADE_FINAL_DE_SAIDA))));
+            cadastroDeGrupo.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
+
             cadastroDeGrupos.add(cadastroDeGrupo);
 
             Log.i("lista", cadastroDeGrupo.getId() + cadastroDeGrupo.getNomeDoGrupo());

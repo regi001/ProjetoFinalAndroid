@@ -73,32 +73,20 @@
             android:text="@string/telaDeCadastroDeGrupo_edtLocalDeAtuacao" />
 
         <TextView
-            android:id="@+id/telaDeCadastroDeGrupo_tvIdadeInicial"
+            android:id="@+id/telaDeCadastroDeGrupo_tvDescriçãoDeAtividades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/telaDeCadastroDeGrupo_tvIdadeInicial" />
+            android:text="@string/telaDeCadastroDeGrupo_tvDescriçãoDeAtividades" />
 
         <EditText
-            android:id="@+id/telaDeCadastroDeGrupo_edtIdadeInicial"
+            android:id="@+id/telaDeCadastroDeGrupo_edtDescricaoDeAtividades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/telaDeCadastroDeGrupo_edtIdadeInicial" />
+            android:text="@string/telaDeCadastroDeGrupo_edtDescricaoDeAtividades" />
 
-        <TextView
-            android:id="@+id/telaDeCadastroDeGrupo_tvIdadeFinal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/telaDeCadastroDeGrupo_tvIdadeFinal" />
 
-        <EditText
-            android:id="@+id/telaDeCadastroDeGrupo_edtIdadeFinal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/telaDeCadastroDeGrupo_edtIdadeFinal" />
 
         <TextView
             android:id="@+id/telaDeCadastroDeGrupo_tvCadastrarUsuaio"

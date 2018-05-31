@@ -44,4 +44,6 @@
     <string name="menu_buscar">Buscar</string>
     <string name="menu_alterar">Alterar</string>
     <string name="menu_excluir">Excluir</string>
+    <string name="telaDeCadastroDeGrupo_tvDescriçãoDeAtividades">Dercreva as atividades do grupo:</string>
+    <string name="telaDeCadastroDeGrupo_edtDescricaoDeAtividades" />
 </resources>

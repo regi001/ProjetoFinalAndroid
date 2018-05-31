@@ -15,10 +15,7 @@ public class TelaDeCadastroActivity extends Activity {
     Button btnSalvar, btnCancelar;
     CadastroDAO dao;
 
-    final int MENU_SALVAR = 1;
-    final int MENU_BUSCAR = 2;
-    final int MENU_ALTERAR = 3;
-    final int MENU_EXCLUIR = 4;
+
 
 
     @Override
@@ -56,6 +53,9 @@ public void salvar (View view){
 
     dao.salvar(cadastro);
     Log.i("appmain","passou salvar" );
+    Log.i("salvar",cadastro.getUsuario());
+    Log.i("salvar",cadastro.getEmail());
+    Log.i("salvar",cadastro.getSenha());
     finish();
 }
     public void buscarCadatro(){

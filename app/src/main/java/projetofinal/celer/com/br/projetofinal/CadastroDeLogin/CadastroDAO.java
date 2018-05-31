@@ -60,7 +60,7 @@ public class CadastroDAO {
         values.put(Cadastro.SENHA, cadastro.getSenha());
 
 
-        db.update(Cadastro.TABELA, values, "nome=?", where);
+        db.update(Cadastro.TABELA, values, "usuario=?", where);
     }
 
     public void excluir(String usuario) {

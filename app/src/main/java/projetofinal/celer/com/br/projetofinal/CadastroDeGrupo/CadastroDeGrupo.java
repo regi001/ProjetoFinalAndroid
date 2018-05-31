@@ -9,18 +9,16 @@ public class CadastroDeGrupo {
     private String nomeDoGrupo;
     private String monitorResponsavel;
     private String localDeAtuacao;
-    private Integer idadeInicialDeEntrada;
-    private Integer idadeFinalDeSaida;
+    private  String descricaoDasAtividades;
 
     final  static  String ID = "_id";
     final  static  String NOME_DO_GRUPO = "nomeDoGrupo";
     final  static  String MONITOR_RESPONSAVEL = "monitorResponsavel";
     final static String LOCAL_DE_ATUACAO = "localDeAtuacao";
-    final static  String IDADE_INICIAL_DE_ENTRADA = "idadeInicialDeEntrada";
-    final static  String IDADE_FINAL_DE_SAIDA = "idadeFinalDeSaida";
+    final  static  String DESCRICAO_DAS_ATIVIDADES ="descricaoDasAtividades";
 
     final static String TABELA = "tbl_grupo";
-    final static String [] COLUNAS = new String []{ID,NOME_DO_GRUPO,MONITOR_RESPONSAVEL,LOCAL_DE_ATUACAO,IDADE_INICIAL_DE_ENTRADA,IDADE_FINAL_DE_SAIDA};
+    final static String [] COLUNAS = new String []{ID,NOME_DO_GRUPO,MONITOR_RESPONSAVEL,LOCAL_DE_ATUACAO,DESCRICAO_DAS_ATIVIDADES};
 
 
     public Long getId() {
@@ -55,19 +53,11 @@ public class CadastroDeGrupo {
         this.localDeAtuacao = localDeAtuacao;
     }
 
-    public Integer getIdadeInicialDeEntrada() {
-        return idadeInicialDeEntrada;
+    public String getDescricaoDasAtividades() {
+        return descricaoDasAtividades;
     }
 
-    public void setIdadeInicialDeEntrada(Integer idadeInicialDeEntrada) {
-        this.idadeInicialDeEntrada = idadeInicialDeEntrada;
-    }
-
-    public Integer getIdadeFinalDeSaida() {
-        return idadeFinalDeSaida;
-    }
-
-    public void setIdadeFinalDeSaida(Integer idadeFinalDeSaida) {
-        this.idadeFinalDeSaida = idadeFinalDeSaida;
+    public void setDescricaoDasAtividades(String descricaoDasAtividades) {
+        this.descricaoDasAtividades = descricaoDasAtividades;
     }
 }

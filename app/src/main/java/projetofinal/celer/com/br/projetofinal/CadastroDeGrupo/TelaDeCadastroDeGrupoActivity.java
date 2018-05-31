@@ -14,7 +14,7 @@ import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActi
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeGrupoActivity extends Activity {
-    EditText edtNomeDoGrupo, edtMonitorResponsavel,edtId,edtIdadeDeInicio,edtIdadeFinal,edtLocalDeAtuacao;
+    EditText edtId, edtNomeDoGrupo, edtMonitorResponsavel,edtLocalDeAtuacao, edtDecricaoAtividades;
     TextView tvCadastrarUsuario;
     CadastroDeGrupoDAO dao;
 
@@ -34,8 +34,8 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         edtNomeDoGrupo = findViewById(R.id.TelaDeCadastroDeGrupo_edtNomeDoGrupo);
         edtMonitorResponsavel = findViewById(R.id.telaDeCadastroDeGrupo_edtMonitorResponsavel);
         edtLocalDeAtuacao = findViewById(R.id.telaDeCadastroDeGrupo_edtLocalDeAtuacao);
-        edtIdadeDeInicio = findViewById(R.id.telaDeCadastroDeGrupo_edtIdadeInicial);
-        edtIdadeFinal = findViewById(R.id.telaDeCadastroDeGrupo_edtIdadeFinal);
+        edtDecricaoAtividades = findViewById(R.id.telaDeCadastroDeGrupo_edtDescricaoDeAtividades);
+
 
         Intent it = getIntent();
         Long id = it.getLongExtra(CadastroDeGrupo.ID,0);
@@ -80,6 +80,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
             case MENU_ALTERAR:
                 alterarGrupo();
+                break;
 
             case MENU_EXCLUIR:
                 excluirGrupo();
@@ -94,12 +95,13 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         cadastroDeGrupo.setNomeDoGrupo(edtNomeDoGrupo.getText().toString());
         cadastroDeGrupo.setMonitorResponsavel(edtMonitorResponsavel.getText().toString());
         cadastroDeGrupo.setLocalDeAtuacao(edtLocalDeAtuacao.getText().toString());
-        cadastroDeGrupo.setIdadeInicialDeEntrada(Integer.valueOf(edtIdadeDeInicio.getText().toString()));
-        cadastroDeGrupo.setIdadeFinalDeSaida(Integer.valueOf(edtIdadeFinal.getText().toString()));
+        cadastroDeGrupo.setDescricaoDasAtividades(edtDecricaoAtividades.getText().toString());
+
 
         dao.salvar(cadastroDeGrupo);
         finish();
         Log.i("appmain","passou salvar");
+        Log.i("lista",cadastroDeGrupo.getMonitorResponsavel());
     }
     public void buscarGrupo(){
 
@@ -108,8 +110,8 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         edtNomeDoGrupo.setText(cadastroDeGrupo.getNomeDoGrupo());
         edtMonitorResponsavel.setText(cadastroDeGrupo.getMonitorResponsavel());
         edtLocalDeAtuacao.setText(cadastroDeGrupo.getLocalDeAtuacao());
-        edtIdadeDeInicio.setText(cadastroDeGrupo.getIdadeInicialDeEntrada());
-        edtIdadeFinal.setText(cadastroDeGrupo.getIdadeFinalDeSaida());
+        edtDecricaoAtividades.setText(cadastroDeGrupo.getDescricaoDasAtividades());
+
 
         Log.i("appmain","passou buscar");
 
@@ -120,8 +122,8 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         cadastroDeGrupo.setNomeDoGrupo(edtNomeDoGrupo.getText().toString());
         cadastroDeGrupo.setMonitorResponsavel(edtMonitorResponsavel.getText().toString());
         cadastroDeGrupo.setLocalDeAtuacao(edtLocalDeAtuacao.getText().toString());
-        cadastroDeGrupo.setIdadeInicialDeEntrada(Integer.valueOf(edtIdadeDeInicio.getText().toString()));
-        cadastroDeGrupo.setIdadeFinalDeSaida(Integer.valueOf(edtIdadeFinal.getText().toString()));
+        cadastroDeGrupo.setDescricaoDasAtividades(edtDecricaoAtividades.getText().toString());
+
 
 
         dao.alterar(cadastroDeGrupo);

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".CadastroDeLogin.TelaDeCadastroActivity" />
         <activity android:name=".CadastroDeLogin.TelaDeLoginActivity" />
-        <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoActivity"></activity>
+        <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoActivity" />
+        <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity"></activity>
     </application>
 
 </manifest>
