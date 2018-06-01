@@ -21,6 +21,21 @@
         android:padding="10dp"/>
 
     <TextView
+        android:id="@+id/telaDeCadastro_tvId"
+        style="@style/label_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/telaDeCadastro_tvId" />
+
+    <EditText
+        android:id="@+id/telaDeCadastro_edtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/telaDeCadastro_edtId" />
+
+    <TextView
         android:id="@+id/telaDeCadastro_tvNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeGrupo_tvId"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeGrupo_edtId" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvNome"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/TelaDeCadastroDeUsuario_edtNomeUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/TelaDeCadastroDeUsuario_edtNomeUsuario" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvEndereco"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtEndereco" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvTelefone"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtTelefone" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvRg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvRg"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtRg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtRg" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvCpf"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtCpf"/>
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvIdade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvIdade"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtIdade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtIdade" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvEscolaridade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvEscolaridade"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtEscolaridade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtEscolaridade"
+                android:textAppearance="@android:style/TextAppearance.DialogWindowTitle" />
+
+            <TextView
+                android:id="@+id/telaDeCadastroDeUsuario_tvNumeroDeNis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telaDeCadastroDeUsuario_tvNumeroDeNis"
+                android:textColor="@android:color/background_dark" />
+
+            <EditText
+                android:id="@+id/telaDeCadastroDeUsuario_edtNis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/telaDeCadastroDeUsuario_edtNis"
+                android:textAppearance="@android:style/TextAppearance.DialogWindowTitle" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

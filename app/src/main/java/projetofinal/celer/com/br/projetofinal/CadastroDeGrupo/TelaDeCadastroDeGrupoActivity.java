@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity;
+import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeGrupoActivity extends Activity {
@@ -40,24 +41,26 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
 
         Intent it = getIntent();
-        Long id = it.getLongExtra(CadastroDeGrupo.ID,0);
+        Long id = it.getLongExtra(CadastroDeGrupo.ID, 0);
 
-        if (id!=0){
+        if (id != 0) {
             edtId.setText(String.valueOf(id));
             buscarGrupo();
         }
+
 
         tvCadastrarUsuario = findViewById(R.id.telaDeCadastroDeGrupo_tvCadastrarUsuaio);
         tvCadastrarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it;
-                it = new Intent(TelaDeCadastroDeGrupoActivity.this,TelaDeCadastroActivity.class);
+                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeUsuarioActivity.class);
+                it.putExtra(CadastroDeGrupo.ID, edtId.getText().toString());
+                startActivityForResult(it, 1);
                 startActivity(it);
             }
         });
     }
-
 
 
     @Override
@@ -69,25 +72,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         menu.add(0,MENU_LISTAR,0,R.string.menu_listar);
         return true;
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1) {
-            Toast.makeText(this, "Voce licou em salvar!!", Toast.LENGTH_LONG).show();
-        }
-        if (requestCode == 2) {
-            Toast.makeText(this, "Voce Clicou em buscar!!", Toast.LENGTH_LONG).show();
-        }
-        if (requestCode == 3) {
-            Toast.makeText(this, "Voce Clicou em alterar!!", Toast.LENGTH_LONG).show();
-        }
-        if (requestCode == 4) {
-            Toast.makeText(this, "Voce Clicou em excluir!!", Toast.LENGTH_LONG).show();
-        }
-        if (requestCode == 5) {
-            Toast.makeText(this, "Voce Clicou em listar!!", Toast.LENGTH_LONG).show();
-        }
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

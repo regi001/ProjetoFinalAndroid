@@ -56,4 +56,22 @@
     <string name="cadastroDeGrupoListItem_tvNomeDoGrupo">Nome Do Grupo:</string>
     <string name="menu_novo">Novo</string>
     <string name="menu_cancelar">Cancelar</string>
+    <string name="telaDeCadastroDeUsuario_tvNome">Nome:</string>
+    <string name="TelaDeCadastroDeUsuario_edtNomeUsuario" />
+    <string name="telaDeCadastroDeUsuario_tvEndereco">Endereço:</string>
+    <string name="telaDeCadastroDeUsuario_edtEndereco" />
+    <string name="telaDeCadastroDeUsuario_tvTelefone">Telefone:</string>
+    <string name="telaDeCadastroDeUsuario_edtTelefone" />
+    <string name="telaDeCadastroDeUsuario_tvRg">Registro Geral:</string>
+    <string name="telaDeCadastroDeUsuario_edtRg" />
+    <string name="telaDeCadastroDeUsuario_tvCpf">CPF:</string>
+    <string name="telaDeCadastroDeUsuario_edtCpf" />
+    <string name="telaDeCadastroDeUsuario_tvIdade">Idade:</string>
+    <string name="telaDeCadastroDeUsuario_edtIdade" />
+    <string name="telaDeCadastroDeUsuario_tvEscolaridade">Escolaridade:</string>
+    <string name="telaDeCadastroDeUsuario_edtEscolaridade" />
+    <string name="telaDeCadastroDeUsuario_tvNumeroDeNis">Numero  do NIS:</string>
+    <string name="telaDeCadastroDeUsuario_edtNis" />
+    <string name="telaDeCadastro_tvId">Id:</string>
+    <string name="telaDeCadastro_edtId" />
 </resources>

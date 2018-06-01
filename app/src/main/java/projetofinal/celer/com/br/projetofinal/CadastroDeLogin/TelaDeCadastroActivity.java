@@ -11,7 +11,7 @@ import android.widget.EditText;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroActivity extends Activity {
-    EditText edtUsuario, edtEmail, edtSenha;
+    EditText edtid, edtUsuario, edtEmail, edtSenha;
     Button btnSalvar, btnCancelar;
     CadastroDAO dao;
 
@@ -25,7 +25,7 @@ public class TelaDeCadastroActivity extends Activity {
 
         dao = new CadastroDAO(this);
 
-
+        edtid = findViewById(R.id.telaDeCadastro_edtId);
         edtUsuario = findViewById(R.id.telaDeCadastro_edtNome);
         edtEmail = findViewById(R.id.telaDeCadastro_edtEmail);
         edtSenha = findViewById(R.id.telaDeCadastro_edtSenha);
