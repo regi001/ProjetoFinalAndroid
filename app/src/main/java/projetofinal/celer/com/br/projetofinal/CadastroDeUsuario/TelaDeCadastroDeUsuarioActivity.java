@@ -30,8 +30,7 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_de_cadastro_de_usuario);
 
-        Intent it = getIntent();
-        String id = String.valueOf(it.getLongExtra(CadastroDeGrupo.ID, 0));
+
 
         edtid = findViewById(R.id.telaDeCadastroDeUsuario_edtId);
         edtnome = findViewById(R.id.TelaDeCadastroDeUsuario_edtNomeUsuario);
@@ -45,7 +44,8 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
 
         cadastroDeUsuarioDAO = new CadastroDeUsuarioDAO(this);
         cadastroDeGrupoDAO = new CadastroDeGrupoDAO(this);
-
+        Intent it = getIntent();
+        String id = String.valueOf(it.getLongExtra(CadastroDeGrupo.ID, 0));
         cadastroDeGrupo = new CadastroDeGrupo();
         cadastroDeGrupo = cadastroDeGrupoDAO.buscar(id);
 
