@@ -9,7 +9,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.Cadastro;
+
 import projetofinal.celer.com.br.projetofinal.sqlite.BancoDados;
 
 /**
@@ -27,17 +27,17 @@ public class CadastroDeGrupoDAO {
     public void salvar(CadastroDeGrupo cadastroDeGrupo) {
 
         ContentValues values = new ContentValues();
-        values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
-        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
-        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL,cadastroDeGrupo.getMonitorResponsavel());
-        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
+        values.put(CadastroDeGrupo.NOME_DO_GRUPO, cadastroDeGrupo.getNomeDoGrupo());
+        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL, cadastroDeGrupo.getMonitorResponsavel());
+        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO, cadastroDeGrupo.getLocalDeAtuacao());
+
+        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES, cadastroDeGrupo.getDescricaoDasAtividades());
 
         db.insert(CadastroDeGrupo.TABELA, null, values);
 
-        Log.i("appmain","passou salvar");
-        Log.i("lista",cadastroDeGrupo.getMonitorResponsavel());
+        Log.i("appmain", "passou salvar");
+        Log.i("lista", cadastroDeGrupo.getMonitorResponsavel());
     }
-
 
 
     public CadastroDeGrupo buscar(String id) {
@@ -56,9 +56,9 @@ public class CadastroDeGrupoDAO {
         cadastroDeGrupo.setLocalDeAtuacao(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
         cadastroDeGrupo.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
 
-        Log.i("appmain","passou buscar");
+        Log.i("appmain", "passou buscar");
 
-       return cadastroDeGrupo;
+        return cadastroDeGrupo;
     }
 
     public void alterar(CadastroDeGrupo cadastroDeGrupo) {
@@ -66,14 +66,45 @@ public class CadastroDeGrupoDAO {
         String[] where = new String[]{String.valueOf(cadastroDeGrupo.getId())};
         ContentValues values = new ContentValues();
 
-        values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
-        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL,cadastroDeGrupo.getMonitorResponsavel());
-        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
-        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
-
+        values.put(CadastroDeGrupo.NOME_DO_GRUPO, cadastroDeGrupo.getNomeDoGrupo());
+        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL, cadastroDeGrupo.getMonitorResponsavel());
+        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO, cadastroDeGrupo.getLocalDeAtuacao());
+        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES, cadastroDeGrupo.getDescricaoDasAtividades());
 
 
         db.update(CadastroDeGrupo.TABELA, values, "_id=?", where);
+    }
+
+
+    public List<CadastroDeGrupo> listar() {
+
+        String[] colunas = CadastroDeGrupo.COLUNAS;
+
+        Cursor c = db.query(CadastroDeGrupo.TABELA,
+                colunas, null, null, null, null, null);
+
+
+        List<CadastroDeGrupo> cadastroDeGrupos = new ArrayList<CadastroDeGrupo>();
+
+        if (c.moveToFirst()) {
+
+            do {
+
+                CadastroDeGrupo cadas = new CadastroDeGrupo();
+                cadas.setId(c.getLong(c.getColumnIndex(CadastroDeGrupo.ID)));
+                cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
+                cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
+                cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
+                cadas.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
+
+                boolean add;
+                if (cadastroDeGrupos.add(cadas)) add = true;
+                else add = false;
+
+
+            } while (c.moveToNext());
+        }
+        return cadastroDeGrupos;
     }
 
     public void excluir(String id) {
@@ -81,36 +112,9 @@ public class CadastroDeGrupoDAO {
         String[] where = new String[]{id};
         db.delete(CadastroDeGrupo.TABELA, "_id = ?", where);
     }
-
-    public List<CadastroDeGrupo> listar(){
-
-        String[] colunas = CadastroDeGrupo.COLUNAS;
-
-        Cursor c= db.query(CadastroDeGrupo.TABELA,
-                colunas,null,null,null,null,null);
+}
 
 
-        List<CadastroDeGrupo> cadastroDeGrupos = new ArrayList<CadastroDeGrupo>();
-
-        if (c.moveToFirst());
-        do {
-
-            CadastroDeGrupo cadas = new CadastroDeGrupo();
-
-            cadas.setId(c.getLong(c.getColumnIndex(CadastroDeGrupo.ID)));
-            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
-            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
-            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
-            cadas.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
-
-            cadastroDeGrupos.add(cadas);
-
-
-        }while (c.moveToNext());
-
-        return cadastroDeGrupos;
-    }
-    }
 
 
 

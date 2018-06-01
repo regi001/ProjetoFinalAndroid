@@ -66,7 +66,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         menu.add(0,MENU_BUSCAR,0,R.string.menu_buscar);
         menu.add(0,MENU_ALTERAR,0,R.string.menu_alterar);
         menu.add(0,MENU_EXCLUIR,0,R.string.menu_excluir);
-        menu.add(0,MENU_EXCLUIR,0,R.string.menu_listar);
+        menu.add(0,MENU_LISTAR,0,R.string.menu_listar);
         return true;
     }
     @Override
@@ -165,7 +165,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
     public void listar(){
         Intent it = new Intent(this, TelaDeCadastroDeGrupoListActivity.class);
         // startActivity(it);
-        startActivityForResult(it, 1);
+        startActivityForResult(it, 5);
     }
 
 

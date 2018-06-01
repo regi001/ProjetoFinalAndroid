@@ -32,7 +32,6 @@ public class CadastroDAO {
     }
 
 
-
     public Cadastro buscar(String id) {
 
         String[] colunas = Cadastro.COLUNAS;
@@ -75,47 +74,52 @@ public class CadastroDAO {
         Cursor c = db.query(Cadastro.TABELA, colunas, null, null, null, null, null);
         List<Cadastro> cadastros = new ArrayList<Cadastro>();
 
-        if (c.moveToFirst()) ;
-        do {
-            Cadastro cadastro = new Cadastro();
+        if (c.moveToFirst()) {
+            do {
+                Cadastro cadastro = new Cadastro();
 
-            cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
+                cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
 
-            cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
+                cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
 
-            cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
-            cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
+                cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
+                cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
-            cadastros.add(cadastro);
+                cadastros.add(cadastro);
 
-            Log.i("lista", cadastro.getUsuario() + cadastro.getUsuario());
-        } while (c.moveToNext());
+                Log.i("lista", cadastro.getUsuario() + cadastro.getUsuario());
+            } while (c.moveToNext());
+
+        }
         return cadastros;
     }
 
 
- public boolean validarCadastro(String usuario){
-     String[] colunas = Cadastro.COLUNAS;
-     String[] where = new String[]{usuario};
+    public boolean validarCadastro(String usuario) {
+        String[] colunas = Cadastro.COLUNAS;
+        String[] where = new String[]{usuario};
 
-     Cursor c = db.query(Cadastro.TABELA, colunas, "usuario =?", where, null, null, null, null);
-     c.moveToFirst();
+        Cursor c = db.query(Cadastro.TABELA, colunas, "usuario =?", where, null, null, null, null);
+        c.moveToFirst();
 
-     Cadastro cadastro = new Cadastro();
-     cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
-     cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
-     cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
-     cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
+            Cadastro cadastro = new Cadastro();
+            cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
+            cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
+            cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
+            cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
 
-     if (usuario.equals(cadastro.getUsuario()) ) return true;
-     else {return false;}
+            if (usuario.equals(cadastro.getUsuario())) {
+                return true;
+
+            } else {
+                return false;
+            }
 
 
- }
+        }
 
 
-
-}
+    }
 
 
 
