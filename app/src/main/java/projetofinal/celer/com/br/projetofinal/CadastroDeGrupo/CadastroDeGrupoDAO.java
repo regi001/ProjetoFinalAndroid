@@ -23,11 +23,13 @@ public class CadastroDeGrupoDAO {
     public CadastroDeGrupoDAO(Context context) {
         db = BancoDados.getDB(context);
     }
-    public void salvar(CadastroDeGrupo cadastroDeGrupo) {
-        ContentValues values = new ContentValues();
 
+    public void salvar(CadastroDeGrupo cadastroDeGrupo) {
+
+        ContentValues values = new ContentValues();
         values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
         values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
+        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL,cadastroDeGrupo.getMonitorResponsavel());
         values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
 
         db.insert(CadastroDeGrupo.TABELA, null, values);
@@ -65,6 +67,7 @@ public class CadastroDeGrupoDAO {
         ContentValues values = new ContentValues();
 
         values.put(CadastroDeGrupo.NOME_DO_GRUPO,cadastroDeGrupo.getNomeDoGrupo());
+        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL,cadastroDeGrupo.getMonitorResponsavel());
         values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO,cadastroDeGrupo.getLocalDeAtuacao());
         values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES,cadastroDeGrupo.getDescricaoDasAtividades());
 
@@ -79,32 +82,38 @@ public class CadastroDeGrupoDAO {
         db.delete(CadastroDeGrupo.TABELA, "_id = ?", where);
     }
 
-    public List<CadastroDeGrupo> listar() {
+    public List<CadastroDeGrupo> listar(){
 
         String[] colunas = CadastroDeGrupo.COLUNAS;
-        Cursor c = db.query(CadastroDeGrupo.TABELA, colunas, null, null, null, null, null);
+
+        Cursor c= db.query(CadastroDeGrupo.TABELA,
+                colunas,null,null,null,null,null);
+
+
         List<CadastroDeGrupo> cadastroDeGrupos = new ArrayList<CadastroDeGrupo>();
 
-        if (c.moveToFirst()) ;
+        if (c.moveToFirst());
         do {
-            CadastroDeGrupo cadastroDeGrupo = new CadastroDeGrupo();
+
+            CadastroDeGrupo cadas = new CadastroDeGrupo();
+
+            cadas.setId(c.getLong(c.getColumnIndex(CadastroDeGrupo.ID)));
+            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
+            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
+            cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
+            cadas.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
+
+            cadastroDeGrupos.add(cadas);
 
 
-            cadastroDeGrupo.setId(Long.valueOf(c.getString(c.getColumnIndex(CadastroDeGrupo.ID))));
-            cadastroDeGrupo.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
-            cadastroDeGrupo.setMonitorResponsavel(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
-            cadastroDeGrupo.setLocalDeAtuacao(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
-            cadastroDeGrupo.setDescricaoDasAtividades(c.getString(c.getColumnIndex(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES)));
+        }while (c.moveToNext());
 
-            cadastroDeGrupos.add(cadastroDeGrupo);
-
-            Log.i("lista", cadastroDeGrupo.getId() + cadastroDeGrupo.getNomeDoGrupo());
-        } while (c.moveToNext());
         return cadastroDeGrupos;
     }
-
-
-
-
-
     }
+
+
+
+
+
+

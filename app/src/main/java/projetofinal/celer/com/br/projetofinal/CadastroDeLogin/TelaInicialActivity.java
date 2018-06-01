@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity;
+import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaInicialActivity extends Activity {

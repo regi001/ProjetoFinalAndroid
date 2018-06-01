@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity;
 import projetofinal.celer.com.br.projetofinal.R;
@@ -22,6 +23,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
     final int MENU_BUSCAR = 2;
     final int MENU_ALTERAR = 3;
     final int MENU_EXCLUIR = 4;
+    final int MENU_LISTAR = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,27 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         menu.add(0,MENU_BUSCAR,0,R.string.menu_buscar);
         menu.add(0,MENU_ALTERAR,0,R.string.menu_alterar);
         menu.add(0,MENU_EXCLUIR,0,R.string.menu_excluir);
+        menu.add(0,MENU_EXCLUIR,0,R.string.menu_listar);
         return true;
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            Toast.makeText(this, "Voce licou em salvar!!", Toast.LENGTH_LONG).show();
+        }
+        if (requestCode == 2) {
+            Toast.makeText(this, "Voce Clicou em buscar!!", Toast.LENGTH_LONG).show();
+        }
+        if (requestCode == 3) {
+            Toast.makeText(this, "Voce Clicou em alterar!!", Toast.LENGTH_LONG).show();
+        }
+        if (requestCode == 4) {
+            Toast.makeText(this, "Voce Clicou em excluir!!", Toast.LENGTH_LONG).show();
+        }
+        if (requestCode == 5) {
+            Toast.makeText(this, "Voce Clicou em listar!!", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -84,6 +106,10 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
             case MENU_EXCLUIR:
                 excluirGrupo();
+                break;
+
+            case MENU_LISTAR:
+                listar();
                 break;
 
         }
@@ -134,6 +160,12 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
         dao.excluir(edtId.getText().toString());
         finish();
+    }
+
+    public void listar(){
+        Intent it = new Intent(this, TelaDeCadastroDeGrupoListActivity.class);
+        // startActivity(it);
+        startActivityForResult(it, 1);
     }
 
 

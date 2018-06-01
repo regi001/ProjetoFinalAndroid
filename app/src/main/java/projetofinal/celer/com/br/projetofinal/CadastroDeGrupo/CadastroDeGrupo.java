@@ -5,13 +5,14 @@ package projetofinal.celer.com.br.projetofinal.CadastroDeGrupo;
  */
 
 public class CadastroDeGrupo {
+
     private Long id;
     private String nomeDoGrupo;
     private String monitorResponsavel;
     private String localDeAtuacao;
     private  String descricaoDasAtividades;
 
-    final  static  String ID = "_id";
+   public final  static  String ID = "_id";
     final  static  String NOME_DO_GRUPO = "nomeDoGrupo";
     final  static  String MONITOR_RESPONSAVEL = "monitorResponsavel";
     final static String LOCAL_DE_ATUACAO = "localDeAtuacao";

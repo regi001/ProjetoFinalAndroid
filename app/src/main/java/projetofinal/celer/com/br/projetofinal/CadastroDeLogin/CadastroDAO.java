@@ -33,16 +33,16 @@ public class CadastroDAO {
 
 
 
-    public Cadastro buscar(String usuario) {
+    public Cadastro buscar(String id) {
 
         String[] colunas = Cadastro.COLUNAS;
-        String[] where = new String[]{usuario};
+        String[] where = new String[]{id};
 
-        Cursor c = db.query(Cadastro.TABELA, colunas, "usuario =?", where, null, null, null, null);
+        Cursor c = db.query(Cadastro.TABELA, colunas, "_id =?", where, null, null, null, null);
         c.moveToFirst();
 
         Cadastro cadastro = new Cadastro();
-
+        cadastro.setId(c.getLong(c.getColumnIndex(Cadastro.ID)));
         cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
         cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
         cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
@@ -52,7 +52,7 @@ public class CadastroDAO {
 
     public void alterar(Cadastro cadastro) {
 
-        String[] where = new String[]{String.valueOf(cadastro.getUsuario())};
+        String[] where = new String[]{String.valueOf(cadastro.getId())};
         ContentValues values = new ContentValues();
 
         values.put(Cadastro.USUARIO, cadastro.getUsuario());
@@ -60,13 +60,13 @@ public class CadastroDAO {
         values.put(Cadastro.SENHA, cadastro.getSenha());
 
 
-        db.update(Cadastro.TABELA, values, "usuario=?", where);
+        db.update(Cadastro.TABELA, values, "_id=?", where);
     }
 
-    public void excluir(String usuario) {
+    public void excluir(String id) {
 
-        String[] where = new String[]{usuario};
-        db.delete(Cadastro.TABELA, "usuario = ?", where);
+        String[] where = new String[]{id};
+        db.delete(Cadastro.TABELA, "_id = ?", where);
     }
 
     public List<Cadastro> listar() {
@@ -79,6 +79,7 @@ public class CadastroDAO {
         do {
             Cadastro cadastro = new Cadastro();
 
+            cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
 
             cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
 
@@ -101,7 +102,7 @@ public class CadastroDAO {
      c.moveToFirst();
 
      Cadastro cadastro = new Cadastro();
-
+     cadastro.setId(Long.valueOf(c.getLong(c.getColumnIndex(Cadastro.ID))));
      cadastro.setUsuario(c.getString(c.getColumnIndex(Cadastro.USUARIO)));
      cadastro.setEmail(c.getString(c.getColumnIndex(Cadastro.EMAIL)));
      cadastro.setSenha(c.getString(c.getColumnIndex(Cadastro.SENHA)));
