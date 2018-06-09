@@ -36,7 +36,7 @@ public class TelaInicialActivity extends Activity {
     }
 
     public void cadastrarGrupo(View view){
-        Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroDeGrupoActivity.class);
+        Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroDeGrupoListActivity.class);
         startActivity(it);
 
 

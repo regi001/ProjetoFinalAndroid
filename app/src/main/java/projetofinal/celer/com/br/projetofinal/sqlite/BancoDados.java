@@ -17,7 +17,8 @@ public class BancoDados {
 	
 	// Cria a tabela com o "_id" sequencial
 	private static final String[] SCRIPT_DATABASE_CREATE = new String[] {
-			"CREATE TABLE tbl_cadastro(_id integer primary key, usuario text,email text,senha text);","CREATE TABLE tbl_grupo(_id integer primary key,nomeDoGrupo text,monitorResponsavel text,localDeAtuacao text,descricaoDasAtividades text);",
+			"CREATE TABLE tbl_cadastro(_id integer primary key, usuario text,email text,senha text);",
+			"CREATE TABLE tbl_grupo(_id integer primary key,nomeDoGrupo text,monitorResponsavel text,localDeAtuacao text,descricaoDasAtividades text);",
 			"CREATE TABLE tbl_usuario(_id integer primary key,cadastroDeGrupo text, nome text,endereco text,telefone text,rg text,cpf text,idade text,escolaridade text,nuemeroDeNis text);"
 	};
 

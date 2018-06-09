@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupo;
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupoDAO;
+import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity;
 import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeLoginActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
@@ -44,10 +46,18 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
 
         cadastroDeUsuarioDAO = new CadastroDeUsuarioDAO(this);
         cadastroDeGrupoDAO = new CadastroDeGrupoDAO(this);
+
         Intent it = getIntent();
-        String id = String.valueOf(it.getLongExtra(CadastroDeGrupo.ID, 0));
-        cadastroDeGrupo = new CadastroDeGrupo();
-        cadastroDeGrupo = cadastroDeGrupoDAO.buscar(id);
+
+        if(it != null) {
+            String id = String.valueOf(it.getStringExtra(CadastroDeGrupo.ID));
+
+            if (id != ""){
+                cadastroDeGrupo = new CadastroDeGrupo();
+                cadastroDeGrupo = cadastroDeGrupoDAO.buscar(id);
+                Toast.makeText(this,id,Toast.LENGTH_LONG).show();
+            }
+        }
 
     }
 
@@ -70,12 +80,12 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
             case MENU_ALTERAR:
                 alterarUsuario();
                 break;
-            case MENU_BUSCAR:
-                buscarUsuario();
-                break;
+
             case MENU_EXCLUIR:
                 excluirUsuario();
 
+            case MENU_LISTAR_USUARIOS:
+                listar();
         }
         return true;
     }
@@ -112,10 +122,7 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         finish();
     }
 
-    public void buscarUsuario() {
 
-
-    }
 
     public void excluirUsuario(){
 
@@ -124,7 +131,7 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
 
     }
     public void listar(){
-        Intent it = new Intent(this, TelaDeLoginActivity.class);
+        Intent it = new Intent(this, TelaDeCadastroDeGrupoListActivity.class);
         // startActivity(it);
         startActivityForResult(it, 5);
     }

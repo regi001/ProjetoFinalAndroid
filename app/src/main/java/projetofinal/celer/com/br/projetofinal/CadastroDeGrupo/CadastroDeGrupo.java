@@ -6,7 +6,7 @@ package projetofinal.celer.com.br.projetofinal.CadastroDeGrupo;
 
 public class CadastroDeGrupo {
 
-    private Long id;
+    public Long id;
     private String nomeDoGrupo;
     private String monitorResponsavel;
     private String localDeAtuacao;

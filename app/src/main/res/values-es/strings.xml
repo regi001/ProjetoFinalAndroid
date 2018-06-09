@@ -47,6 +47,7 @@
     <string name="menu_listar">Listar</string>
     <string name="telaDeCadastroDeGrupo_tvDescriçãoDeAtividades">Dercreva as atividades do grupo:</string>
     <string name="telaDeCadastroDeGrupo_edtDescricaoDeAtividades" />
+    <string name="cadastroDeusuarioListItem_tvNomeDoUsuario">Nome Do Usuário:</string>
     <string name="cadastroDeGrupoListItem_tvNomeDoGrupo">Nome Do Grupo:</string>
     <string name="menu_novo">Novo</string>
     <string name="menu_cancelar">Cancelar</string>

@@ -58,34 +58,8 @@ public class CadastroDeUsuarioDAO {
 
         db.update(CadastroDeUsuario.TABELA,values,CadastroDeUsuario.ID, where);
     }
-    public CadastroDeUsuario buscar(String id, CadastroDeGrupo cadastroDeGrupo) {
-
-        String[] colunas = CadastroDeUsuario.COLUNAS;
-        String[] where = new String[]{id};
-
-        //as informações vao para o cursor
-        Cursor c = db.query(CadastroDeUsuario.TABELA, colunas,
-                CadastroDeUsuario.ID + "= ?", where, null, null, null, null);
-
-        // move os objetos para o inicio e começa ler o objetos
-        c.moveToFirst();
 
 
-        // pega os itens da sua respectiva coluna pelo cursor
-        CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
-        cadastroDeUsuario.setId(c.getLong(c.getColumnIndex(CadastroDeUsuario.ID)));
-        cadastroDeUsuario.setCadastroDeGrupo(cadastroDeGrupo);
-        cadastroDeUsuario.setNome(c.getString(c.getColumnIndex(CadastroDeUsuario.NOME)));
-        cadastroDeUsuario.setEndereco(c.getString(c.getColumnIndex(CadastroDeUsuario.ENDERECO)));
-        cadastroDeUsuario.setTelefone(c.getString(c.getColumnIndex(CadastroDeUsuario.TELEFONE)));
-        cadastroDeUsuario.setRg(c.getString(c.getColumnIndex(CadastroDeUsuario.RG)));
-        cadastroDeUsuario.setCpf(c.getString(c.getColumnIndex(CadastroDeUsuario.CPF)));
-        cadastroDeUsuario.setIdade(c.getString(c.getColumnIndex(CadastroDeUsuario.ID)));
-        cadastroDeUsuario.setEscolaridade(c.getString(c.getColumnIndex(CadastroDeUsuario.ESCOLARIDADE)));
-        cadastroDeUsuario.setNumeroDeNis(c.getString(c.getColumnIndex(CadastroDeUsuario.NUMERO_DE_NIS)));
-
-        return cadastroDeUsuario;
-    }
     public List<CadastroDeUsuario> listar(CadastroDeGrupo cadastroDeGrupo){
 
         String [] colunas = CadastroDeUsuario.COLUNAS;
