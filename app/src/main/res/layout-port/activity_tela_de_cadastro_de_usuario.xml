@@ -152,6 +152,16 @@
                 android:inputType="textPersonName"
                 android:text="@string/telaDeCadastroDeUsuario_edtNis"
                 android:textAppearance="@android:style/TextAppearance.DialogWindowTitle" />
+
+            <Button
+                android:id="@+id/telaDeCadastro_btnTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/telaDecadastro_btnTelefone"
+                android:layout_margin="3dp"
+                android:onClick="ligar"/>
+
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

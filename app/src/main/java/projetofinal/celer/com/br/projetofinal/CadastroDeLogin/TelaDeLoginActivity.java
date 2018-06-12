@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity;
 import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity;
@@ -54,7 +55,7 @@ CadastroDAO cadastroDAO;
 
         if (cadastroDAO.validarCadastro(usuario)) {
             Intent it = new Intent(this
-                    , TelaDeCadastroDeGrupoActivity.class);
+                    , TelaDeCadastroDeGrupoListActivity.class);
             startActivity(it);
 
             Log.i("appmain", "passou pelo if");

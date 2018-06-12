@@ -1,10 +1,18 @@
 package projetofinal.celer.com.br.projetofinal.CadastroDeUsuario;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,6 +24,7 @@ import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeUsuarioActivity extends Activity {
     EditText edtid, edtnome, edtendereco, edtIdade, edtRg, edtTelefone, edtCpf, edtEscolaridade, edtNumeroDeNis;
+    Button btnLigar;
 
     CadastroDeUsuarioDAO cadastroDeUsuarioDAO;
     CadastroDeGrupoDAO cadastroDeGrupoDAO;
@@ -43,6 +52,8 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         edtEscolaridade = findViewById(R.id.telaDeCadastroDeUsuario_edtEscolaridade);
         edtNumeroDeNis = findViewById(R.id.telaDeCadastroDeUsuario_edtNis);
         edtIdade = findViewById(R.id.telaDeCadastroDeUsuario_edtIdade);
+
+        btnLigar =  findViewById(R.id.telaDeCadastro_btnTelefone);
 
         cadastroDeUsuarioDAO = new CadastroDeUsuarioDAO(this);
         cadastroDeGrupoDAO = new CadastroDeGrupoDAO(this);
@@ -134,6 +145,30 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         Intent it = new Intent(this, TelaDeCadastroDeGrupoListActivity.class);
         // startActivity(it);
         startActivityForResult(it, 5);
+    }
+
+    public void ligar (View view){
+        fazerLigacao();
+    }
+    public void fazerLigacao(){
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{"Manifest.permission.CALL_PHONE"},1);
+        }else{
+            startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:"+edtTelefone.getText().toString())));
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case 1:
+                if ((grantResults.length>0)&&(grantResults[0]== PackageManager.PERMISSION_GRANTED)){
+                    fazerLigacao();
+                }
+                break;
+        }
     }
 
 

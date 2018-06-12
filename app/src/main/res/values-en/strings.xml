@@ -51,6 +51,8 @@
     <string name="cadastroDeusuarioListItem_tvNomeDoUsuario">Nome Do Usuário:</string>
     <string name="menu_novo">Novo</string>
     <string name="menu_cancelar">Cancelar</string>
+    <string name="telaDecadastro_btnEmail">Abrir Navegador</string>
+    <string name="telaDecadastro_btnTelefone">Ligar</string>
     <string name="telaDeCadastroDeUsuario_tvNome">Nome:</string>
     <string name="TelaDeCadastroDeUsuario_edtNomeUsuario" />
     <string name="telaDeCadastroDeUsuario_tvEndereco">Endereço:</string>

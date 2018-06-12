@@ -11,6 +11,7 @@
     <string name="telaDeCadastro_tvSenha">Senha</string>
     <string name="telaDeCadastro_edtEmail" />
     <string name="telaDeCadastro_tvEmail">Email</string>
+    <string name="telaDecadastro_btnTelefone">Ligar</string>
     <string name="telaDeCadastro_edtSenha" />
     <string name="telaDeCadastro_btnSalvar">Salvar</string>
     <string name="telaDecadastro_btnCancelar">Cancelar</string>
@@ -50,6 +51,7 @@
     <string name="cadastroDeusuarioListItem_tvNomeDoUsuario">Nome Do Usuário:</string>
     <string name="cadastroDeGrupoListItem_tvNomeDoGrupo">Nome Do Grupo:</string>
     <string name="menu_novo">Novo</string>
+    <string name="telaDecadastro_btnEmail">Abrir Navegador</string>
     <string name="menu_cancelar">Cancelar</string>
     <string name="telaDeCadastroDeUsuario_tvNome">Nome:</string>
     <string name="TelaDeCadastroDeUsuario_edtNomeUsuario" />

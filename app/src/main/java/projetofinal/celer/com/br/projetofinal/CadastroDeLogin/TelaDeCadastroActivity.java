@@ -1,8 +1,14 @@
 package projetofinal.celer.com.br.projetofinal.CadastroDeLogin;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +18,7 @@ import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroActivity extends Activity {
     EditText edtid, edtUsuario, edtEmail, edtSenha;
-    Button btnSalvar, btnCancelar;
+    Button btnSalvar, btnCancelar, btnEmail;
     CadastroDAO dao;
 
 
@@ -36,7 +42,7 @@ public class TelaDeCadastroActivity extends Activity {
 
         btnSalvar = findViewById(R.id.telaDeCadastro_btnSalvar);
         btnCancelar = findViewById(R.id.telaDeCadastro_btnCancelar);
-
+        btnEmail =  findViewById(R.id.telaDeCadastro_btnEmail);
     }
     // pega o evento do botão cancelar e fecha a tela
     public void cancelar (View view){
@@ -67,6 +73,20 @@ public void salvar (View view){
        edtSenha.setText(cadastro.getSenha());
 
     }
+
+    public void email (View view){
+        email();
+    }
+    public void email(){
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{"Manifest.permission.INTERNET"},1);
+        }else{
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://"+edtEmail.getText().toString())));
+        }
+    }
+
+
 
 
 

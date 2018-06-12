@@ -5,4 +5,6 @@ package projetofinal.celer.com.br.projetofinal.CadastroDeUsuario;
  */
 
 public class CadastroDeUsuarioListAdapter {
+
+
 }
