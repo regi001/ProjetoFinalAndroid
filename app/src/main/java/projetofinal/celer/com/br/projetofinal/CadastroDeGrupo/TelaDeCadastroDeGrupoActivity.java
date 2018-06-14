@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity;
 import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity;
+import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeGrupoActivity extends Activity {
@@ -54,7 +55,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent it;
-                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeUsuarioActivity.class);
+                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeUsuarioListActivity.class);
                 it.putExtra(CadastroDeGrupo.ID, edtId.getText().toString());
                 startActivityForResult(it, 1);
                 startActivity(it);
@@ -128,14 +129,14 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
     }
     public void alterarGrupo(){
-        CadastroDeGrupo cadastroDeGrupo = new CadastroDeGrupo();
 
+        CadastroDeGrupo cadastroDeGrupo = new CadastroDeGrupo();
+        cadastroDeGrupo.setId(Long.valueOf(edtId.getText().toString()));
+        cadastroDeGrupo.setId(Long.valueOf(edtId.getText().toString()));
         cadastroDeGrupo.setNomeDoGrupo(edtNomeDoGrupo.getText().toString());
         cadastroDeGrupo.setMonitorResponsavel(edtMonitorResponsavel.getText().toString());
         cadastroDeGrupo.setLocalDeAtuacao(edtLocalDeAtuacao.getText().toString());
         cadastroDeGrupo.setDescricaoDasAtividades(edtDecricaoAtividades.getText().toString());
-
-
 
         dao.alterar(cadastroDeGrupo);
         finish();

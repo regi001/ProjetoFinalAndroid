@@ -41,7 +41,9 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_de_cadastro_de_usuario);
 
-
+        Intent it = getIntent();
+        //String id = it.getStringExtra("_id");
+        String id = String.valueOf(it.getLongExtra(CadastroDeGrupo.ID,0));
 
         edtid = findViewById(R.id.telaDeCadastroDeUsuario_edtId);
         edtnome = findViewById(R.id.TelaDeCadastroDeUsuario_edtNomeUsuario);
@@ -58,19 +60,19 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
         cadastroDeUsuarioDAO = new CadastroDeUsuarioDAO(this);
         cadastroDeGrupoDAO = new CadastroDeGrupoDAO(this);
 
-        Intent it = getIntent();
+     //   Intent it = getIntent();
 
-        if(it != null) {
-            String id = String.valueOf(it.getStringExtra(CadastroDeGrupo.ID));
+     //   if(it != null) {
+      //      String id = String.valueOf(it.getStringExtra(CadastroDeGrupo.ID));
 
-            if (id != ""){
+        //    if (id != ""){
                 cadastroDeGrupo = new CadastroDeGrupo();
                 cadastroDeGrupo = cadastroDeGrupoDAO.buscar(id);
                 Toast.makeText(this,id,Toast.LENGTH_LONG).show();
-            }
+          //  }
         }
 
-    }
+   // }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -119,6 +121,7 @@ public class TelaDeCadastroDeUsuarioActivity extends Activity {
 
     public void alterarUsuario() {
         CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
+        cadastroDeUsuario.setId(Long.valueOf(edtid.getText().toString()));
         cadastroDeUsuario.setNome(edtnome.getText().toString());
         cadastroDeUsuario.setCadastroDeGrupo(cadastroDeGrupo);
         cadastroDeUsuario.setEndereco(edtendereco.getText().toString());

@@ -36,8 +36,25 @@ public class CadastroDeGrupoDAO {
         db.insert(cadastroDeGrupo.TABELA, null, values);
 
         Log.i("appmain", "passou salvar");
-        Log.i("lista", cadastroDeGrupo.getMonitorResponsavel());
+
     }
+
+    public void alterar(CadastroDeGrupo cadastroDeGrupo) {
+
+        String id = String.valueOf(cadastroDeGrupo.getId());
+        String[] where = new String[]{id};
+
+        ContentValues values = new ContentValues();
+
+        values.put(CadastroDeGrupo.NOME_DO_GRUPO, cadastroDeGrupo.getNomeDoGrupo());
+        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL, cadastroDeGrupo.getMonitorResponsavel());
+        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO, cadastroDeGrupo.getLocalDeAtuacao());
+        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES, cadastroDeGrupo.getDescricaoDasAtividades());
+
+
+        db.update(CadastroDeGrupo.TABELA, values, "_id=?", where);
+    }
+
 
 
     public CadastroDeGrupo buscar(String id){
@@ -49,7 +66,7 @@ public class CadastroDeGrupoDAO {
 
         c.moveToFirst();
         CadastroDeGrupo cadas = new CadastroDeGrupo();
-        cadas.setId(c.getLong(c.getColumnIndex(CadastroDeGrupo.ID)));
+        cadas.setId(c.getLong(c.getColumnIndex("_id")));
         cadas.setNomeDoGrupo(c.getString(c.getColumnIndex(CadastroDeGrupo.NOME_DO_GRUPO)));
         cadas.setMonitorResponsavel(c.getString(c.getColumnIndex(CadastroDeGrupo.MONITOR_RESPONSAVEL)));
         cadas.setLocalDeAtuacao(c.getString(c.getColumnIndex(CadastroDeGrupo.LOCAL_DE_ATUACAO)));
@@ -57,19 +74,6 @@ public class CadastroDeGrupoDAO {
         return cadas;
     }
 
-    public void alterar(CadastroDeGrupo cadastroDeGrupo) {
-
-        String[] where = new String[]{String.valueOf(cadastroDeGrupo.getId())};
-        ContentValues values = new ContentValues();
-
-        values.put(CadastroDeGrupo.NOME_DO_GRUPO, cadastroDeGrupo.getNomeDoGrupo());
-        values.put(CadastroDeGrupo.MONITOR_RESPONSAVEL, cadastroDeGrupo.getMonitorResponsavel());
-        values.put(CadastroDeGrupo.LOCAL_DE_ATUACAO, cadastroDeGrupo.getLocalDeAtuacao());
-        values.put(CadastroDeGrupo.DESCRICAO_DAS_ATIVIDADES, cadastroDeGrupo.getDescricaoDasAtividades());
-
-
-        db.update(CadastroDeGrupo.TABELA, values, "_id=?", where);
-    }
 
 
     public List<CadastroDeGrupo> listar() {

@@ -8,7 +8,7 @@ public class BancoDados {
 	// Nome do banco
 	private static final String NOME_BANCO = "projetoFinal";
 	// Controle de versao
-	private static final int VERSAO_BANCO = 7;
+	private static final int VERSAO_BANCO = 8;
 	// Script para fazer drop na tabela
 	private static final String[] SCRIPT_DATABASE_DELETE = new String[] {
 			"DROP TABLE IF EXISTS tbl_cadastro;","DROP TABLE IF EXISTS tbl_grupo;","DROP TABLE IF EXISTS tbl_usuario;"};
