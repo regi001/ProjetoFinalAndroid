@@ -156,10 +156,12 @@
                 android:id="@+id/telaDeCadastro_btnTelefone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/telaDecadastro_btnTelefone"
                 android:layout_margin="3dp"
-                android:onClick="ligar"/>
+                android:layout_weight="1"
+                android:onClick="ligar"
+                android:text="@string/telaDecadastro_btnTelefone"
+                android:textAlignment="center"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
     </ScrollView>

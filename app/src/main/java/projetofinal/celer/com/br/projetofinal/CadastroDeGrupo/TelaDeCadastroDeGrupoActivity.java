@@ -9,11 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity;
-import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity;
-import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity;
+
+import projetofinal.celer.com.br.projetofinal.CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity;
 import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaDeCadastroDeGrupoActivity extends Activity {
@@ -55,7 +53,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent it;
-                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeUsuarioListActivity.class);
+                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeParticipanteListActivity.class);
                 it.putExtra(CadastroDeGrupo.ID, edtId.getText().toString());
                 startActivityForResult(it, 1);
                 startActivity(it);

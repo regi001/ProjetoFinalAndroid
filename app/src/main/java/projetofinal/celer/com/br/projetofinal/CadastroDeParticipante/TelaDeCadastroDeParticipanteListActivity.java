@@ -1,4 +1,4 @@
-package projetofinal.celer.com.br.projetofinal.CadastroDeGrupo;
+package projetofinal.celer.com.br.projetofinal.CadastroDeParticipante;
 
 
 import android.app.ListActivity;
@@ -11,12 +11,16 @@ import android.widget.ListView;
 
 import java.util.List;
 
+
+
 import projetofinal.celer.com.br.projetofinal.R;
 
-public class TelaDeCadastroDeGrupoListActivity extends ListActivity {
-    CadastroDeGrupoListAdapter adapter;
-    List<CadastroDeGrupo> cadastroDeGrupos;
-    CadastroDeGrupoDAO dao;
+public class TelaDeCadastroDeParticipanteListActivity extends ListActivity {
+
+
+    CadastroDeParticipanteListAdapter adapter;
+    List<Participante> participantes;
+    CadastroDeParticipanteDAO dao;
 
     final int MENU_NOVO = 1;
     final int MENU_CANCELAR = 2;
@@ -24,13 +28,13 @@ public class TelaDeCadastroDeGrupoListActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_de_cadastro_de_grupo_list);
+        setContentView(R.layout.activity_tela_de_cadastro_de_participante_list);
 
-        dao = new CadastroDeGrupoDAO(this);
-        cadastroDeGrupos = dao.listar();
+        dao = new CadastroDeParticipanteDAO(this);
+       participantes = dao.listar();
 
-        adapter = new CadastroDeGrupoListAdapter(
-                this, R.layout.activity_tela_de_cadastro_de_grupo_list_item,cadastroDeGrupos);
+        adapter = new CadastroDeParticipanteListAdapter(
+                this, R.layout.activity_tela_de_cadastro_de_participante_list_item,participantes);
 
         setListAdapter(adapter);
 
@@ -39,15 +43,15 @@ public class TelaDeCadastroDeGrupoListActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         // para recuperar os elemtos da lista
-        CadastroDeGrupo cadastroDeGrupo = cadastroDeGrupos.get(position);
+        Participante participante = participantes.get(position);
 
-        Intent it = new Intent(this, TelaDeCadastroDeGrupoActivity.class);
-        it.putExtra(CadastroDeGrupo.ID, cadastroDeGrupo.getId());
+        Intent it = new Intent(this, TelaDeCadastroDeParticipanteActivity.class);
+        it.putExtra(Participante.ID, participante.getId());
         startActivityForResult(it, 1);
 
     }
     public  void novo(){
-        Intent it = new Intent(this, TelaDeCadastroDeGrupoActivity.class);
+        Intent it = new Intent(this, TelaDeCadastroDeParticipanteActivity.class);
         // startActivity(it);
         startActivityForResult(it, 1);
     }
@@ -60,8 +64,8 @@ public class TelaDeCadastroDeGrupoListActivity extends ListActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-       menu.add(0,MENU_NOVO,0,R.string.menu_novo);
-       menu.add(0,MENU_CANCELAR,0,R.string.menu_cancelar);
+        menu.add(0,MENU_NOVO,0,R.string.menu_novo);
+        menu.add(0,MENU_CANCELAR,0,R.string.menu_cancelar);
         return true;
     }
 
@@ -82,8 +86,8 @@ public class TelaDeCadastroDeGrupoListActivity extends ListActivity {
 
     public void atualizarLista() {
 
-        cadastroDeGrupos.clear();
-        cadastroDeGrupos.addAll(dao.listar());
+        participantes.clear();
+        participantes.addAll(dao.listar());
         adapter.notifyDataSetChanged();
 
     }

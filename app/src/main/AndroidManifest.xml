@@ -25,7 +25,9 @@
         <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoActivity" />
         <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity" />
         <activity android:name=".CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity" />
-        <activity android:name=".CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity"></activity>
+        <activity android:name=".CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity" />
+        <activity android:name=".CadastroDeParticipante.TelaDeCadastroDeParticipanteActivity" />
+        <activity android:name=".CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity"></activity>
     </application>
 
 </manifest>

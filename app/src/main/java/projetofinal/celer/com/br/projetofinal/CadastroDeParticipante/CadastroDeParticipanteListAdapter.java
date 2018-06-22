@@ -1,4 +1,4 @@
-package projetofinal.celer.com.br.projetofinal.CadastroDeUsuario;
+package projetofinal.celer.com.br.projetofinal.CadastroDeParticipante;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,27 +11,28 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupo;
+import projetofinal.celer.com.br.projetofinal.CadastroDeParticipante.Participante;
 import projetofinal.celer.com.br.projetofinal.R;
 
 /**
- * Created by regia on 08/06/2018.
+ * Created by regia on 21/06/2018.
  */
 
-public class CadastroDeUsuarioListAdapter extends ArrayAdapter<CadastroDeUsuario> {
+public class CadastroDeParticipanteListAdapter extends ArrayAdapter<Participante> {
 
     Context context;
     int layout;
-    List<CadastroDeUsuario> cadastroDeUsuarios;
+    List<Participante> participantes;
 
-    public CadastroDeUsuarioListAdapter(@NonNull Context context, int resource, @NonNull List<CadastroDeUsuario> objects) {
+    public CadastroDeParticipanteListAdapter(@NonNull Context context, int resource, @NonNull List<Participante> objects) {
         super(context,resource,objects);
         this.context =context;
         this.layout = resource;
-        this.cadastroDeUsuarios = objects;
+        this.participantes = objects;
     }
 
     @NonNull
+
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
@@ -40,15 +41,14 @@ public class CadastroDeUsuarioListAdapter extends ArrayAdapter<CadastroDeUsuario
 
         View item = inflater.inflate(layout,null);
         TextView tvNomeDoGrupo = item.findViewById(R.id.cadastroDeGrupoListItem_tvNomeDoGrupo);
-        CadastroDeUsuario cadastroDeUsuario= cadastroDeUsuarios.get(position);
+        Participante participante= participantes.get(position);
 
 
-        tvNomeDoGrupo.setText(cadastroDeUsuario.getNome());
+        tvNomeDoGrupo.setText(participante.getNome());
 
 
 
 
         return item;
     }
-
 }

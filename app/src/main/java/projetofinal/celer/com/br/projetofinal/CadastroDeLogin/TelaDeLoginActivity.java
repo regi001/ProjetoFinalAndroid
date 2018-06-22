@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity;
-import projetofinal.celer.com.br.projetofinal.CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity;
+
 import projetofinal.celer.com.br.projetofinal.R;
-import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity;
+
 
 public class TelaDeLoginActivity extends Activity {
 EditText edtUsuario, edtLogin, edtSenha;

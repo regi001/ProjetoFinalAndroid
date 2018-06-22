@@ -1,15 +1,14 @@
-package projetofinal.celer.com.br.projetofinal.CadastroDeUsuario;
+package projetofinal.celer.com.br.projetofinal.CadastroDeParticipante;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupo;
 
 /**
- * Created by regia on 01/06/2018.
+ * Created by regia on 21/06/2018.
  */
 
-public class CadastroDeUsuario {
-
+public class Participante {
     private  Long id;
-    private CadastroDeGrupo cadastroDeGrupo;
+
     private  String nome;
     private String endereco;
     private String telefone;
@@ -20,7 +19,7 @@ public class CadastroDeUsuario {
     private String numeroDeNis;
 
     public static final String ID = "_id";
-    public  static final String CADASTRO_DE_GRUPO = "cadastroDeGrupo";
+
     public  static  final String NOME ="nome";
     public  static  final  String ENDERECO ="endereco";
     public  static final  String TELEFONE = "telefone";
@@ -30,8 +29,8 @@ public class CadastroDeUsuario {
     public  static  final  String ESCOLARIDADE="escolaridade";
     public  static  final  String NUMERO_DE_NIS="nuemeroDeNis";
 
-    final static String TABELA="tbl_usuario";
-    final static String [] COLUNAS = new String []{ID,CADASTRO_DE_GRUPO,NOME,ENDERECO,TELEFONE,RG,CPF,IDADE,ESCOLARIDADE,NUMERO_DE_NIS};
+   public final static String TABELA ="tbl_participante";
+   public  final static String [] COLUNAS = new String []{ID,NOME,ENDERECO,TELEFONE,RG,CPF,IDADE,ESCOLARIDADE,NUMERO_DE_NIS};
 
     public Long getId() {
         return id;
@@ -39,14 +38,6 @@ public class CadastroDeUsuario {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public CadastroDeGrupo getCadastroDeGrupo() {
-        return cadastroDeGrupo;
-    }
-
-    public void setCadastroDeGrupo(CadastroDeGrupo cadastroDeGrupo) {
-        this.cadastroDeGrupo = cadastroDeGrupo;
     }
 
     public String getNome() {
@@ -113,3 +104,5 @@ public class CadastroDeUsuario {
         this.numeroDeNis = numeroDeNis;
     }
 }
+
+
