@@ -1,13 +1,21 @@
 package projetofinal.celer.com.br.projetofinal.CadastroDeParticipante;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupo;
 import projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.CadastroDeGrupoDAO;
@@ -33,15 +41,15 @@ public class TelaDeCadastroDeParticipanteActivity extends Activity {
 
         dao = new CadastroDeParticipanteDAO(this);
 
-        edtid = findViewById(R.id.telaDeCadastroDeUsuario_edtId);
-        edtnome = findViewById(R.id.TelaDeCadastroDeUsuario_edtNomeUsuario);
-        edtTelefone = findViewById(R.id.telaDeCadastroDeUsuario_edtTelefone);
-        edtendereco = findViewById(R.id.telaDeCadastroDeUsuario_edtEndereco);
-        edtRg = findViewById(R.id.telaDeCadastroDeUsuario_edtRg);
-        edtCpf = findViewById(R.id.telaDeCadastroDeUsuario_edtCpf);
-        edtEscolaridade = findViewById(R.id.telaDeCadastroDeUsuario_edtEscolaridade);
-        edtNumeroDeNis = findViewById(R.id.telaDeCadastroDeUsuario_edtNis);
-        edtIdade = findViewById(R.id.telaDeCadastroDeUsuario_edtIdade);
+        edtid = findViewById(R.id.telaDeCadastroDeParticipante_edtId);
+        edtnome = findViewById(R.id.telaDeCadastroDeParticipante_edtNomeUsuario);
+        edtTelefone = findViewById(R.id.telaDeCadastroDeParticipante_edtTelefone);
+        edtendereco = findViewById(R.id.telaDeCadastroDeParticipante_edtEndereco);
+        edtRg = findViewById(R.id.telaDeCadastroDeParticipante_edtRg);
+        edtCpf = findViewById(R.id.telaDeCadastroDeParticipante_edtCpf);
+        edtEscolaridade = findViewById(R.id.telaDeCadastroDeParticipante_edtEscolaridade);
+        edtNumeroDeNis = findViewById(R.id.telaDeCadastroDeParticipante_edtNis);
+        edtIdade = findViewById(R.id.telaDeCadastroDeParticipante_edtIdade);
 
         btnLigar = findViewById(R.id.telaDeCadastro_btnTelefone);
 
@@ -107,6 +115,8 @@ public class TelaDeCadastroDeParticipanteActivity extends Activity {
         participante.setIdade(edtNumeroDeNis.getText().toString());
 
         dao.salvar(participante);
+
+        Toast.makeText(getBaseContext(),R.string.Toat_msgSalvar,Toast.LENGTH_LONG).show();
         finish();
 
 
@@ -124,7 +134,7 @@ public class TelaDeCadastroDeParticipanteActivity extends Activity {
         edtEscolaridade.setText(participante.getEscolaridade());
         edtNumeroDeNis.setText(participante.getNumeroDeNis());
 
-
+        Toast.makeText(getBaseContext(),R.string.Toat_msgBuscar,Toast.LENGTH_LONG).show();
         Log.i("appmain","passou buscar");
 
     }
@@ -143,12 +153,14 @@ public class TelaDeCadastroDeParticipanteActivity extends Activity {
        participante.setNumeroDeNis(edtNumeroDeNis.getText().toString());
 
         dao.alterar(participante);
+        Toast.makeText(getBaseContext(),R.string.Toat_msgAlterar,Toast.LENGTH_LONG).show();
         finish();
 
     }
     public void excluirParticipante(){
 
         dao.excluir(edtid.getText().toString());
+        Toast.makeText(getBaseContext(),R.string.Toat_msgExcluir,Toast.LENGTH_LONG).show();
         finish();
     }
 
@@ -156,7 +168,59 @@ public class TelaDeCadastroDeParticipanteActivity extends Activity {
         Intent it = new Intent(this, TelaDeCadastroDeParticipanteListActivity.class);
         // startActivity(it);
         startActivityForResult(it, 5);
+        Toast.makeText(getBaseContext(),R.string.Toat_msgListar,Toast.LENGTH_LONG).show();
+    }
+    public void ligar (View view){
+        fazerLigacao();
+    }
+    public void fazerLigacao(){
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{"Manifest.permission.CALL_PHONE"},1);
+        }else{
+            startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:"+edtTelefone.getText().toString())));
+        }
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case 1:
+                if ((grantResults.length>0)&&(grantResults[0]== PackageManager.PERMISSION_GRANTED)){
+                    fazerLigacao();
+                }
+                break;
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("appmain","passou resume");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("appmain","passou start");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("appmain","passou pause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("appmain","passou stop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("appmain","passou destroy");
+    }
 
 }

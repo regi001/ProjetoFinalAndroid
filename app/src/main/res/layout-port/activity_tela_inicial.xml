@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    style="@style/fundo"
     tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaInicialActivity">
 
 

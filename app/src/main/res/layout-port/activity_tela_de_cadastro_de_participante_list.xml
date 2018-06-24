@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/fundoParticipante"
     tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity">
     <LinearLayout
         android:layout_width="match_parent"

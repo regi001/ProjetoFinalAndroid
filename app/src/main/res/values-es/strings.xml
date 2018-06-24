@@ -71,4 +71,13 @@
     <string name="telaDeCadastroDeUsuario_edtNis" />
     <string name="telaDeCadastro_tvId">Id:</string>
     <string name="telaDeCadastro_edtId" />
+    <string name="TelaDeEntrarNasClasses_btnGrupo">Cadastrar Grupo</string>
+    <string name="TelaDeEntrarNasClasses_btnParticipante">Cadastrar Participante</string>
+    <string name="Toat_msgSalvar">voce clicou em salvar </string>
+    <string name="Toat_msgAlterar">voce clicou em alterar</string>
+    <string name="Toat_msgExcluir">voce clicou em excluir </string>
+    <string name="Toat_msgBuscar">voce clicou em buscar</string>
+    <string name="Toat_msgListar">voce clicou em listar</string>
+    <string name="telaDeCadastroDeGrupo_tvCadastroDeGrupo">Tela De Cadastro De Grupo</string>
+    <string name="telaDeCadastroDeGrupo_tvCadastroDeParticipante">Tela De Cadastro De Participante</string>
 </resources>

@@ -96,18 +96,25 @@
                 android:layout_weight="1"
                 android:onClick="cancelar"
                 android:text="@string/telaDecadastro_btnCancelar" />
-
-            <Button
-                android:id="@+id/telaDeCadastro_btnEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/telaDecadastro_btnEmail"
-                android:layout_margin="3dp"
-                android:onClick="email"/>
-
-
         </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/telaDeCadastro_btnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:onClick="email"
+        android:text="@string/telaDecadastro_btnEmail"
+        />
+
+</LinearLayout>
+
 </LinearLayout>
 </ScrollView>
 </android.support.constraint.ConstraintLayout>

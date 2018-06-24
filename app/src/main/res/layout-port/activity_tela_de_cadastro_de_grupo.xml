@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/fundoGrupo"
     tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeGrupo.TelaDeCadastroDeGrupoActivity">
 <ScrollView
     android:layout_width="match_parent"
@@ -14,6 +15,15 @@
         android:orientation="vertical"
 
         >
+
+        <TextView
+            android:id="@+id/telaDeCadastroDeGrupo_tvCadastroDeGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telaDeCadastroDeGrupo_tvCadastroDeGrupo"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:padding="5dp"/>
 
         <TextView
             android:id="@+id/telaDeCadastroDeGrupo_tvId"
@@ -85,7 +95,6 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="@string/telaDeCadastroDeGrupo_edtDescricaoDeAtividades" />
-
 
 
         <TextView

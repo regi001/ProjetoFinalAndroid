@@ -27,6 +27,7 @@
     <string name="telaDeLogin_tvTitulo">Digite seu Nome de usuário, Login e Senha</string>
     <string name="telaDeCadastroDeGrupo_tvId">Id:</string>
     <string name="telaDeCadastroDeGrupo_edtId" />
+    <string name="telaDeCadastroDeGrupo_tvCadastroDeGrupo">Tela De Cadastro De Grupo</string>
     <string name="telaDeCadastroDeGrupo_tvNomeDoGrupo">Nome Do Grupo:</string>
     <string name="TelaDeCadastroDeGrupo_edtNomeDoGrupo" />
     <string name="telaDeCadastroDeGrupo_tvMonitorResponsavel">Monitor Responsavel:</string>
@@ -71,4 +72,11 @@
     <string name="telaDeCadastroDeUsuario_edtNis" />
     <string name="telaDeCadastro_tvId">Id:</string>
     <string name="telaDeCadastro_edtId" />
+    <string name="TelaDeEntrarNasClasses_btnGrupo">Cadastrar Grupo</string>
+    <string name="TelaDeEntrarNasClasses_btnParticipante">Cadastrar Participante</string>
+    <string name="Toat_msgSalvar">voce clicou em salvar </string>
+    <string name="Toat_msgAlterar">voce clicou em alterar</string>
+    <string name="Toat_msgExcluir">voce clicou em excluir </string>
+    <string name="Toat_msgBuscar">voce clicou em buscar</string>
+    <string name="Toat_msgListar">voce clicou em listar</string>
 </resources>

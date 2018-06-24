@@ -62,7 +62,7 @@ public class CadastroDeParticipanteDAO {
         values.put(Participante.NUMERO_DE_NIS, participante.getNumeroDeNis());
 
 
-        db.update(Participante.TABELA,values,Participante.ID, where);
+        db.update(Participante.TABELA,values,"_id=?", where);
     }
     public Participante buscar(String id){
 

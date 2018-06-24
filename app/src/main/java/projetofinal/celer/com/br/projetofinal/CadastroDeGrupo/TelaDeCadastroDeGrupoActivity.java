@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import projetofinal.celer.com.br.projetofinal.CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity;
@@ -109,6 +110,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
 
 
         dao.salvar(cadastroDeGrupo);
+        Toast.makeText(getBaseContext(),R.string.Toat_msgSalvar,Toast.LENGTH_LONG).show();
         finish();
         Log.i("appmain","passou salvar");
         Log.i("lista",cadastroDeGrupo.getMonitorResponsavel());
@@ -122,7 +124,7 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         edtLocalDeAtuacao.setText(cadastroDeGrupo.getLocalDeAtuacao());
         edtDecricaoAtividades.setText(cadastroDeGrupo.getDescricaoDasAtividades());
 
-
+        Toast.makeText(getBaseContext(),R.string.Toat_msgBuscar,Toast.LENGTH_LONG).show();
         Log.i("appmain","passou buscar");
 
     }
@@ -137,12 +139,14 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         cadastroDeGrupo.setDescricaoDasAtividades(edtDecricaoAtividades.getText().toString());
 
         dao.alterar(cadastroDeGrupo);
+        Toast.makeText(getBaseContext(),R.string.Toat_msgAlterar,Toast.LENGTH_LONG).show();
         finish();
 
     }
     public void excluirGrupo(){
 
         dao.excluir(edtId.getText().toString());
+        Toast.makeText(getBaseContext(),R.string.Toat_msgExcluir,Toast.LENGTH_LONG).show();
         finish();
     }
 
@@ -150,9 +154,38 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
         Intent it = new Intent(this, TelaDeCadastroDeGrupoListActivity.class);
         // startActivity(it);
         startActivityForResult(it, 5);
+        Toast.makeText(getBaseContext(),R.string.Toat_msgListar,Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("appmain","passou resume");
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("appmain","passou start");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("appmain","passou pause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("appmain","passou stop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("appmain","passou destroy");
+    }
 
 
 }

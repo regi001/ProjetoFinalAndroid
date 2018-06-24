@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import projetofinal.celer.com.br.projetofinal.CadastroDeParticipante.Participante;
 import projetofinal.celer.com.br.projetofinal.R;
 
 /**
@@ -40,11 +39,11 @@ public class CadastroDeParticipanteListAdapter extends ArrayAdapter<Participante
                 = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View item = inflater.inflate(layout,null);
-        TextView tvNomeDoGrupo = item.findViewById(R.id.cadastroDeGrupoListItem_tvNomeDoGrupo);
+        TextView tvNomeDoParticipante = item.findViewById(R.id.cadastroDeParticipanteListItem_tvNomeDoUsuario);
         Participante participante= participantes.get(position);
 
 
-        tvNomeDoGrupo.setText(participante.getNome());
+        tvNomeDoParticipante.setText(participante.getNome());
 
 
 

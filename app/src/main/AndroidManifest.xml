@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroDeLogin.TelaInicialActivity">
+        <activity android:name=".CadastroDeLogin.TelaDeEntradaNasClases">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,10 +24,10 @@
         <activity android:name=".CadastroDeLogin.TelaDeLoginActivity" />
         <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoActivity" />
         <activity android:name=".CadastroDeGrupo.TelaDeCadastroDeGrupoListActivity" />
-        <activity android:name=".CadastroDeUsuario.TelaDeCadastroDeUsuarioActivity" />
-        <activity android:name=".CadastroDeUsuario.TelaDeCadastroDeUsuarioListActivity" />
+         />
         <activity android:name=".CadastroDeParticipante.TelaDeCadastroDeParticipanteActivity" />
-        <activity android:name=".CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity"></activity>
+        <activity android:name=".CadastroDeParticipante.TelaDeCadastroDeParticipanteListActivity" />
+        <activity android:name=".CadastroDeLogin.TelaInicialActivity"></activity>
     </application>
 
 </manifest>
