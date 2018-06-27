@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeGrupo_tvCadastroDeParticipante"
                 android:textAlignment="center"
-                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"
                 android:padding="5dp"/>
 
             <TextView
@@ -29,7 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeGrupo_tvId"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtId"
@@ -44,7 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvNome"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtNomeUsuario"
@@ -59,7 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvEndereco"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtEndereco"
@@ -74,7 +77,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvTelefone"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtTelefone"
@@ -89,7 +93,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvRg"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtRg"
@@ -104,7 +109,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvCpf"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtCpf"
@@ -119,7 +125,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvIdade"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtIdade"
@@ -134,7 +141,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvEscolaridade"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtEscolaridade"
@@ -150,7 +158,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeUsuario_tvNumeroDeNis"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeParticipante_edtNis"

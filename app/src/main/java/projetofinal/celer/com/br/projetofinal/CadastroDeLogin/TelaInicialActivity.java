@@ -12,7 +12,7 @@ import projetofinal.celer.com.br.projetofinal.R;
 
 public class TelaInicialActivity extends Activity {
 
-    Button btnLogin,btnCadastrarLogin;
+    Button btnLogin,btnCadastrarLogin,btnGrupo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class TelaInicialActivity extends Activity {
 
         btnLogin = findViewById(R.id.telaInicial_btnLogin);
         btnCadastrarLogin = findViewById(R.id.telaInicial_btnLogin);
-
+        btnGrupo = findViewById(R.id.telaInicial_chamarCadastrargrupo);
     }
 
     public void login (View view){
@@ -32,6 +32,10 @@ public class TelaInicialActivity extends Activity {
 
     public void cadastrarLogin (View view){
         Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroActivity.class);
+        startActivity(it);
+    }
+    public void cadastrarGrupo (View view){
+        Intent it= new Intent(TelaInicialActivity.this,TelaDeCadastroDeGrupoListActivity.class);
         startActivity(it);
     }
 

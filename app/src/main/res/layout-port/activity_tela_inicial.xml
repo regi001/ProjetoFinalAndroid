@@ -9,7 +9,12 @@
     style="@style/fundo"
     tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaInicialActivity">
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:padding="10dp"/>
     <TextView
     android:id="@+id/telaInicial_tvMensagem"
     android:layout_width="match_parent"
@@ -55,5 +60,8 @@
         android:text="@string/telaInicial_chamarCadastarGrupo"
         android:onClick="cadastrarGrupo"
         android:padding="5dp"/>
+
+
+
 
 </LinearLayout>

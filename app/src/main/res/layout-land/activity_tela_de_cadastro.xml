@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
 
     style="@style/fundo"
+
     tools:context="projetofinal.celer.com.br.projetofinal.CadastroDeLogin.TelaDeCadastroActivity">
 
 <ScrollView
@@ -22,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/telaDeCadastro_tvTitulo"
-        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textAlignment="center"
         android:padding="10dp"/>
@@ -30,7 +30,8 @@
             style="@style/label_texto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/telaDeCadastro_tvNome" />
+            android:text="@string/telaDeCadastro_tvNome"
+            />
 
         <EditText
             android:id="@+id/telaDeCadastro_edtNome"

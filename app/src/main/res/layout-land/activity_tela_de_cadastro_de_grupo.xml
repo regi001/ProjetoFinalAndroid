@@ -24,13 +24,15 @@
                 android:text="@string/telaDeCadastroDeGrupo_tvCadastroDeGrupo"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_dark"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                style="@style/label_texto"/>
 
             <TextView
                 android:id="@+id/telaDeCadastroDeGrupo_tvId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/telaDeCadastroDeGrupo_tvId"
+                style="@style/label_texto"
                 android:textColor="@android:color/background_dark" />
 
             <EditText
@@ -38,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                style="@style/label_texto"
                 android:inputType="textPersonName"
                 android:text="@string/telaDeCadastroDeGrupo_edtId" />
 
@@ -45,6 +48,7 @@
                 android:id="@+id/telaDeCadastroDeGrupo_tvNomeDoGrupo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/label_texto"
                 android:text="@string/telaDeCadastroDeGrupo_tvNomeDoGrupo" />
 
             <EditText
@@ -59,7 +63,8 @@
                 android:id="@+id/telaDeCadastroDeGrupo_tvMonitorResponsavel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/telaDeCadastroDeGrupo_tvMonitorResponsavel" />
+                android:text="@string/telaDeCadastroDeGrupo_tvMonitorResponsavel"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeGrupo_edtMonitorResponsavel"
@@ -67,13 +72,16 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/telaDeCadastroDeGrupo_edtMonitorResponsavel" />
+                android:text="@string/telaDeCadastroDeGrupo_edtMonitorResponsavel"
+                style="@style/label_texto"
+                />
 
             <TextView
                 android:id="@+id/telaDeCadastroDeGrupo_tvLocalDeAtuacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/telaDeCadastroDeGrupo_tvLocalDeAtuacao" />
+                android:text="@string/telaDeCadastroDeGrupo_tvLocalDeAtuacao"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeGrupo_edtLocalDeAtuacao"
@@ -81,13 +89,15 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/telaDeCadastroDeGrupo_edtLocalDeAtuacao" />
+                android:text="@string/telaDeCadastroDeGrupo_edtLocalDeAtuacao"
+                style="@style/label_texto"/>
 
             <TextView
                 android:id="@+id/telaDeCadastroDeGrupo_tvDescriçãoDeAtividades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/telaDeCadastroDeGrupo_tvDescriçãoDeAtividades" />
+                android:text="@string/telaDeCadastroDeGrupo_tvDescriçãoDeAtividades"
+                style="@style/label_texto"/>
 
             <EditText
                 android:id="@+id/telaDeCadastroDeGrupo_edtDescricaoDeAtividades"
@@ -105,7 +115,8 @@
                 android:padding="15dp"
                 android:text="@string/telaDeCadastroDeGrupo_tvCadastrarUsuaio"
                 android:textAlignment="center"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/background_dark"
+                style="@style/label_texto"/>
 
         </LinearLayout>
     </ScrollView>
