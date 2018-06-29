@@ -54,7 +54,8 @@ public class TelaDeCadastroDeGrupoActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent it;
-                it = new Intent(TelaDeCadastroDeGrupoActivity.this, TelaDeCadastroDeParticipanteListActivity.class);
+                it = new Intent(TelaDeCadastroDeGrupoActivity.this,
+                        TelaDeCadastroDeParticipanteListActivity.class);
                 it.putExtra(CadastroDeGrupo.ID, edtId.getText().toString());
                 startActivityForResult(it, 1);
                 startActivity(it);
